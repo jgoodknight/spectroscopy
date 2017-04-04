@@ -14,6 +14,5 @@ setup(name='spectroscopy',
       long_description=long_description,
       license="MIT",
       packages=['spectroscopy', 'spectroscopy.experiments'],
-      package_dir = {'spectroscopy': 'src'},
-      install_requires=['numpy', 'scipy', 'matplotlib']
+      package_dir = {'spectroscopy': 'src'} #,install_requires=['numpy', 'scipy', 'matplotlib']
      )
