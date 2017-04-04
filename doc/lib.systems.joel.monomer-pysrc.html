@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>lib.systems.joel.monomer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="lib-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="lib-module.html">Package&nbsp;lib</a> ::
+        <a href="lib.systems-module.html">Package&nbsp;systems</a> ::
+        <a href="lib.systems.joel-module.html">Package&nbsp;joel</a> ::
+        Module&nbsp;monomer
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="lib.systems.joel.monomer-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="lib.systems.joel.monomer-module.html">Module lib.systems.joel.monomer</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Created on Fri Jan 04 13:23:27 2013</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">@author: Joey</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">numpy</tt> <tt class="py-keyword">as</tt> <tt class="py-name">np</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">spectroscopy</tt><tt class="py-op">.</tt><tt id="link-0" class="py-name" targets="Module lib.Spacetime=lib.Spacetime-module.html,Class lib.Spacetime.Spacetime=lib.Spacetime.Spacetime-class.html"><a title="lib.Spacetime
+lib.Spacetime.Spacetime" class="py-name" href="#" onclick="return doclink('link-0', 'Spacetime', 'link-0');">Spacetime</a></tt> <tt class="py-keyword">as</tt> <tt id="link-1" class="py-name"><a title="lib.Spacetime
+lib.Spacetime.Spacetime" class="py-name" href="#" onclick="return doclink('link-1', 'Spacetime', 'link-0');">Spacetime</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">spectroscopy</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module lib.ElectronicOperator=lib.ElectronicOperator-module.html,Class lib.ElectronicOperator.ElectronicOperator=lib.ElectronicOperator.ElectronicOperator-class.html"><a title="lib.ElectronicOperator
+lib.ElectronicOperator.ElectronicOperator" class="py-name" href="#" onclick="return doclink('link-2', 'ElectronicOperator', 'link-2');">ElectronicOperator</a></tt> <tt class="py-keyword">as</tt> <tt id="link-3" class="py-name"><a title="lib.ElectronicOperator
+lib.ElectronicOperator.ElectronicOperator" class="py-name" href="#" onclick="return doclink('link-3', 'ElectronicOperator', 'link-2');">ElectronicOperator</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">spectroscopy</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module lib.NuclearWavefunction=lib.NuclearWavefunction-module.html"><a title="lib.NuclearWavefunction" class="py-name" href="#" onclick="return doclink('link-4', 'NuclearWavefunction', 'link-4');">NuclearWavefunction</a></tt> <tt class="py-keyword">as</tt> <tt id="link-5" class="py-name"><a title="lib.NuclearWavefunction" class="py-name" href="#" onclick="return doclink('link-5', 'NuclearWavefunction', 'link-4');">NuclearWavefunction</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">spectroscopy</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module lib.NuclearOperator=lib.NuclearOperator-module.html"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-6', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt> <tt class="py-keyword">as</tt> <tt id="link-7" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-7', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">spectroscopy</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Module lib.ElectronicWavefunction=lib.ElectronicWavefunction-module.html"><a title="lib.ElectronicWavefunction" class="py-name" href="#" onclick="return doclink('link-8', 'ElectronicWavefunction', 'link-8');">ElectronicWavefunction</a></tt> <tt class="py-keyword">as</tt> <tt id="link-9" class="py-name"><a title="lib.ElectronicWavefunction" class="py-name" href="#" onclick="return doclink('link-9', 'ElectronicWavefunction', 'link-8');">ElectronicWavefunction</a></tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">spectroscopy</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Module lib.TimeFunction=lib.TimeFunction-module.html"><a title="lib.TimeFunction" class="py-name" href="#" onclick="return doclink('link-10', 'TimeFunction', 'link-10');">TimeFunction</a></tt> <tt class="py-keyword">as</tt> <tt id="link-11" class="py-name"><a title="lib.TimeFunction" class="py-name" href="#" onclick="return doclink('link-11', 'TimeFunction', 'link-10');">TimeFunction</a></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt id="link-12" class="py-name" targets="Variable lib.systems.joel.coherentDimer.energyScale=lib.systems.joel.coherentDimer-module.html#energyScale,Variable lib.systems.joel.incoherentDimer.energyScale=lib.systems.joel.incoherentDimer-module.html#energyScale,Variable lib.systems.joel.monomer.energyScale=lib.systems.joel.monomer-module.html#energyScale,Variable lib.systems.joel.simplifiedMonomer.energyScale=lib.systems.joel.simplifiedMonomer-module.html#energyScale"><a title="lib.systems.joel.coherentDimer.energyScale
+lib.systems.joel.incoherentDimer.energyScale
+lib.systems.joel.monomer.energyScale
+lib.systems.joel.simplifiedMonomer.energyScale" class="py-name" href="#" onclick="return doclink('link-12', 'energyScale', 'link-12');">energyScale</a></tt> <tt class="py-op">=</tt> <tt class="py-number">100</tt> <tt class="py-comment">#wavenumbers</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable lib.systems.joel.coherentDimer.timeScale=lib.systems.joel.coherentDimer-module.html#timeScale,Variable lib.systems.joel.incoherentDimer.timeScale=lib.systems.joel.incoherentDimer-module.html#timeScale,Variable lib.systems.joel.monomer.timeScale=lib.systems.joel.monomer-module.html#timeScale,Variable lib.systems.joel.simplifiedMonomer.timeScale=lib.systems.joel.simplifiedMonomer-module.html#timeScale"><a title="lib.systems.joel.coherentDimer.timeScale
+lib.systems.joel.incoherentDimer.timeScale
+lib.systems.joel.monomer.timeScale
+lib.systems.joel.simplifiedMonomer.timeScale" class="py-name" href="#" onclick="return doclink('link-13', 'timeScale', 'link-13');">timeScale</a></tt>   <tt class="py-op">=</tt> <tt class="py-number">53.09</tt> <tt class="py-comment">#femtoseconds</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt id="link-14" class="py-name" targets="Variable lib.systems.Allan.coherentDimer.mySpace=lib.systems.Allan.coherentDimer-module.html#mySpace,Variable lib.systems.Allan.monomer.mySpace=lib.systems.Allan.monomer-module.html#mySpace,Variable lib.systems.Jacob.witnessBreaker.mySpace=lib.systems.Jacob.witnessBreaker-module.html#mySpace,Variable lib.systems.Juergen.one_fast_mode_monomer.mySpace=lib.systems.Juergen.one_fast_mode_monomer-module.html#mySpace,Variable lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace=lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES-module.html#mySpace,Variable lib.systems.Juergen.one_mode_monomer.mySpace=lib.systems.Juergen.one_mode_monomer-module.html#mySpace,Variable lib.systems.Juergen.two_mode_dimer_detuned.mySpace=lib.systems.Juergen.two_mode_dimer_detuned-module.html#mySpace,Variable lib.systems.Juergen.two_mode_monomer.mySpace=lib.systems.Juergen.two_mode_monomer-module.html#mySpace,Variable lib.systems.Juergen.two_mode_monomer_detuned.mySpace=lib.systems.Juergen.two_mode_monomer_detuned-module.html#mySpace,Variable lib.systems.MgC.MgC.mySpace=lib.systems.MgC.MgC-module.html#mySpace,Variable lib.systems.iodine.dimerHighlyCoupled.mySpace=lib.systems.iodine.dimerHighlyCoupled-module.html#mySpace,Variable lib.systems.iodine.monomer.mySpace=lib.systems.iodine.monomer-module.html#mySpace,Variable lib.systems.iodine.monomer_Accurate.mySpace=lib.systems.iodine.monomer_Accurate-module.html#mySpace,Variable lib.systems.iodine.monomer_ho.mySpace=lib.systems.iodine.monomer_ho-module.html#mySpace,Variable lib.systems.iodine.monomer_s0_div_100.mySpace=lib.systems.iodine.monomer_s0_div_100-module.html#mySpace,Variable lib.systems.joel.coherentDimer.mySpace=lib.systems.joel.coherentDimer-module.html#mySpace,Variable lib.systems.joel.incoherentDimer.mySpace=lib.systems.joel.incoherentDimer-module.html#mySpace,Variable lib.systems.joel.monomer.mySpace=lib.systems.joel.monomer-module.html#mySpace,Variable lib.systems.joel.simplifiedMonomer.mySpace=lib.systems.joel.simplifiedMonomer-module.html#mySpace,Variable lib.systems.naturalNonCondon.coherentDimer.mySpace=lib.systems.naturalNonCondon.coherentDimer-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomer.mySpace=lib.systems.naturalNonCondon.monomer-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomerDoubleMass.mySpace=lib.systems.naturalNonCondon.monomerDoubleMass-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomer_S_0.mySpace=lib.systems.naturalNonCondon.monomer_S_0-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomer_S_0_005.mySpace=lib.systems.naturalNonCondon.monomer_S_0_005-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomer_S_0_2.mySpace=lib.systems.naturalNonCondon.monomer_S_0_2-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomer_S_1.mySpace=lib.systems.naturalNonCondon.monomer_S_1-module.html#mySpace,Variable lib.systems.naturalNonCondon.monomer_S_10.mySpace=lib.systems.naturalNonCondon.monomer_S_10-module.html#mySpace"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-14', 'mySpace', 'link-14');">mySpace</a></tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name"><a title="lib.Spacetime
+lib.Spacetime.Spacetime" class="py-name" href="#" onclick="return doclink('link-15', 'Spacetime', 'link-0');">Spacetime</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="lib.Spacetime
+lib.Spacetime.Spacetime" class="py-name" href="#" onclick="return doclink('link-16', 'Spacetime', 'link-0');">Spacetime</a></tt><tt class="py-op">(</tt><tt class="py-name">xMax</tt> <tt class="py-op">=</tt> <tt class="py-number">10.0</tt><tt class="py-op">,</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">             <tt class="py-name">numberOfNuclearDimenions</tt> <tt class="py-op">=</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">             <tt class="py-name">numberOfElectronicDimensions</tt> <tt class="py-op">=</tt> <tt class="py-number">2</tt><tt class="py-op">,</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">             <tt class="py-name">numberOfSimulationSpacePointsPerNuclearDimension</tt> <tt class="py-op">=</tt> <tt class="py-number">200</tt><tt class="py-op">,</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">             <tt class="py-name">dt</tt> <tt class="py-op">=</tt> <tt class="py-number">.02</tt><tt class="py-op">,</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">             <tt class="py-name">wavenumberBasedUnits_scaling</tt> <tt class="py-op">=</tt> <tt class="py-number">100.0</tt><tt class="py-op">)</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">              </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt id="link-17" class="py-name" targets="Variable lib.systems.joel.coherentDimer.E_00=lib.systems.joel.coherentDimer-module.html#E_00,Variable lib.systems.joel.incoherentDimer.E_00=lib.systems.joel.incoherentDimer-module.html#E_00,Variable lib.systems.joel.monomer.E_00=lib.systems.joel.monomer-module.html#E_00,Variable lib.systems.joel.simplifiedMonomer.E_00=lib.systems.joel.simplifiedMonomer-module.html#E_00"><a title="lib.systems.joel.coherentDimer.E_00
+lib.systems.joel.incoherentDimer.E_00
+lib.systems.joel.monomer.E_00
+lib.systems.joel.simplifiedMonomer.E_00" class="py-name" href="#" onclick="return doclink('link-17', 'E_00', 'link-17');">E_00</a></tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-18', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Class lib.Spacetime.unitHandler=lib.Spacetime.unitHandler-class.html"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-19', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method lib.Spacetime.unitHandler.energyUnitsFromWavenumbers()=lib.Spacetime.unitHandler-class.html#energyUnitsFromWavenumbers"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-20', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">0.0</tt><tt class="py-op">)</tt>  <tt class="py-comment">#joel-energy-units </tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_c=lib.systems.joel.coherentDimer-module.html#omega_c,Variable lib.systems.joel.incoherentDimer.omega_c=lib.systems.joel.incoherentDimer-module.html#omega_c,Variable lib.systems.joel.monomer.omega_c=lib.systems.joel.monomer-module.html#omega_c,Variable lib.systems.joel.simplifiedMonomer.omega_c=lib.systems.joel.simplifiedMonomer-module.html#omega_c"><a title="lib.systems.joel.coherentDimer.omega_c
+lib.systems.joel.incoherentDimer.omega_c
+lib.systems.joel.monomer.omega_c
+lib.systems.joel.simplifiedMonomer.omega_c" class="py-name" href="#" onclick="return doclink('link-21', 'omega_c', 'link-21');">omega_c</a></tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-22', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-23', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-24', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">0.0</tt><tt class="py-op">)</tt> <tt class="py-comment">#joel-energy-units </tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt id="link-25" class="py-name" targets="Variable lib.systems.joel.coherentDimer.E_10=lib.systems.joel.coherentDimer-module.html#E_10,Variable lib.systems.joel.incoherentDimer.E_10=lib.systems.joel.incoherentDimer-module.html#E_10,Variable lib.systems.joel.monomer.E_10=lib.systems.joel.monomer-module.html#E_10,Variable lib.systems.joel.simplifiedMonomer.E_10=lib.systems.joel.simplifiedMonomer-module.html#E_10"><a title="lib.systems.joel.coherentDimer.E_10
+lib.systems.joel.incoherentDimer.E_10
+lib.systems.joel.monomer.E_10
+lib.systems.joel.simplifiedMonomer.E_10" class="py-name" href="#" onclick="return doclink('link-25', 'E_10', 'link-25');">E_10</a></tt> <tt class="py-op">=</tt> <tt id="link-26" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_c
+lib.systems.joel.incoherentDimer.omega_c
+lib.systems.joel.monomer.omega_c
+lib.systems.joel.simplifiedMonomer.omega_c" class="py-name" href="#" onclick="return doclink('link-26', 'omega_c', 'link-21');">omega_c</a></tt> <tt class="py-op">-</tt> <tt id="link-27" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-27', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-28', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-29', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">125.0</tt><tt class="py-op">)</tt> <tt class="py-comment">#joel-energy-units </tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-comment">#first coordinate</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt id="link-30" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_00x=lib.systems.joel.coherentDimer-module.html#omega_00x,Variable lib.systems.joel.incoherentDimer.omega_00x=lib.systems.joel.incoherentDimer-module.html#omega_00x,Variable lib.systems.joel.monomer.omega_00x=lib.systems.joel.monomer-module.html#omega_00x,Variable lib.systems.joel.simplifiedMonomer.omega_00x=lib.systems.joel.simplifiedMonomer-module.html#omega_00x"><a title="lib.systems.joel.coherentDimer.omega_00x
+lib.systems.joel.incoherentDimer.omega_00x
+lib.systems.joel.monomer.omega_00x
+lib.systems.joel.simplifiedMonomer.omega_00x" class="py-name" href="#" onclick="return doclink('link-30', 'omega_00x', 'link-30');">omega_00x</a></tt> <tt class="py-op">=</tt> <tt id="link-31" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_00y=lib.systems.joel.coherentDimer-module.html#omega_00y,Variable lib.systems.joel.incoherentDimer.omega_00y=lib.systems.joel.incoherentDimer-module.html#omega_00y,Variable lib.systems.joel.monomer.omega_00y=lib.systems.joel.monomer-module.html#omega_00y,Variable lib.systems.joel.simplifiedMonomer.omega_00y=lib.systems.joel.simplifiedMonomer-module.html#omega_00y"><a title="lib.systems.joel.coherentDimer.omega_00y
+lib.systems.joel.incoherentDimer.omega_00y
+lib.systems.joel.monomer.omega_00y
+lib.systems.joel.simplifiedMonomer.omega_00y" class="py-name" href="#" onclick="return doclink('link-31', 'omega_00y', 'link-31');">omega_00y</a></tt> <tt class="py-op">=</tt>  <tt id="link-32" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-32', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-33', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-34', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">100</tt><tt class="py-op">)</tt> <tt class="py-comment">#joel-energy-units </tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt id="link-35" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_10x=lib.systems.joel.coherentDimer-module.html#omega_10x,Variable lib.systems.joel.incoherentDimer.omega_10x=lib.systems.joel.incoherentDimer-module.html#omega_10x,Variable lib.systems.joel.monomer.omega_10x=lib.systems.joel.monomer-module.html#omega_10x,Variable lib.systems.joel.simplifiedMonomer.omega_10x=lib.systems.joel.simplifiedMonomer-module.html#omega_10x"><a title="lib.systems.joel.coherentDimer.omega_10x
+lib.systems.joel.incoherentDimer.omega_10x
+lib.systems.joel.monomer.omega_10x
+lib.systems.joel.simplifiedMonomer.omega_10x" class="py-name" href="#" onclick="return doclink('link-35', 'omega_10x', 'link-35');">omega_10x</a></tt> <tt class="py-op">=</tt> <tt id="link-36" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_01x=lib.systems.joel.coherentDimer-module.html#omega_01x,Variable lib.systems.joel.incoherentDimer.omega_01x=lib.systems.joel.incoherentDimer-module.html#omega_01x,Variable lib.systems.joel.monomer.omega_01x=lib.systems.joel.monomer-module.html#omega_01x,Variable lib.systems.joel.simplifiedMonomer.omega_01x=lib.systems.joel.simplifiedMonomer-module.html#omega_01x"><a title="lib.systems.joel.coherentDimer.omega_01x
+lib.systems.joel.incoherentDimer.omega_01x
+lib.systems.joel.monomer.omega_01x
+lib.systems.joel.simplifiedMonomer.omega_01x" class="py-name" href="#" onclick="return doclink('link-36', 'omega_01x', 'link-36');">omega_01x</a></tt> <tt class="py-op">=</tt>  <tt id="link-37" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-37', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-38', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-39', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">200</tt><tt class="py-op">)</tt> <tt class="py-comment">#joel-energy-units </tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_10y=lib.systems.joel.coherentDimer-module.html#omega_10y,Variable lib.systems.joel.incoherentDimer.omega_10y=lib.systems.joel.incoherentDimer-module.html#omega_10y,Variable lib.systems.joel.monomer.omega_10y=lib.systems.joel.monomer-module.html#omega_10y,Variable lib.systems.joel.simplifiedMonomer.omega_10y=lib.systems.joel.simplifiedMonomer-module.html#omega_10y"><a title="lib.systems.joel.coherentDimer.omega_10y
+lib.systems.joel.incoherentDimer.omega_10y
+lib.systems.joel.monomer.omega_10y
+lib.systems.joel.simplifiedMonomer.omega_10y" class="py-name" href="#" onclick="return doclink('link-40', 'omega_10y', 'link-40');">omega_10y</a></tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name" targets="Variable lib.systems.joel.coherentDimer.omega_01y=lib.systems.joel.coherentDimer-module.html#omega_01y,Variable lib.systems.joel.incoherentDimer.omega_01y=lib.systems.joel.incoherentDimer-module.html#omega_01y,Variable lib.systems.joel.monomer.omega_01y=lib.systems.joel.monomer-module.html#omega_01y,Variable lib.systems.joel.simplifiedMonomer.omega_01y=lib.systems.joel.simplifiedMonomer-module.html#omega_01y"><a title="lib.systems.joel.coherentDimer.omega_01y
+lib.systems.joel.incoherentDimer.omega_01y
+lib.systems.joel.monomer.omega_01y
+lib.systems.joel.simplifiedMonomer.omega_01y" class="py-name" href="#" onclick="return doclink('link-41', 'omega_01y', 'link-41');">omega_01y</a></tt> <tt class="py-op">=</tt>  <tt id="link-42" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-42', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-43', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-44', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">150</tt><tt class="py-op">)</tt> <tt class="py-comment">#joel-energy-units </tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt id="link-45" class="py-name" targets="Variable lib.systems.joel.coherentDimer.delta_00x=lib.systems.joel.coherentDimer-module.html#delta_00x,Variable lib.systems.joel.incoherentDimer.delta_00x=lib.systems.joel.incoherentDimer-module.html#delta_00x,Variable lib.systems.joel.monomer.delta_00x=lib.systems.joel.monomer-module.html#delta_00x,Variable lib.systems.joel.simplifiedMonomer.delta_00x=lib.systems.joel.simplifiedMonomer-module.html#delta_00x"><a title="lib.systems.joel.coherentDimer.delta_00x
+lib.systems.joel.incoherentDimer.delta_00x
+lib.systems.joel.monomer.delta_00x
+lib.systems.joel.simplifiedMonomer.delta_00x" class="py-name" href="#" onclick="return doclink('link-45', 'delta_00x', 'link-45');">delta_00x</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable lib.systems.joel.coherentDimer.delta_00y=lib.systems.joel.coherentDimer-module.html#delta_00y,Variable lib.systems.joel.incoherentDimer.delta_00y=lib.systems.joel.incoherentDimer-module.html#delta_00y,Variable lib.systems.joel.monomer.delta_00y=lib.systems.joel.monomer-module.html#delta_00y,Variable lib.systems.joel.simplifiedMonomer.delta_00y=lib.systems.joel.simplifiedMonomer-module.html#delta_00y"><a title="lib.systems.joel.coherentDimer.delta_00y
+lib.systems.joel.incoherentDimer.delta_00y
+lib.systems.joel.monomer.delta_00y
+lib.systems.joel.simplifiedMonomer.delta_00y" class="py-name" href="#" onclick="return doclink('link-46', 'delta_00y', 'link-46');">delta_00y</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt id="link-47" class="py-name" targets="Variable lib.systems.joel.coherentDimer.delta_10x=lib.systems.joel.coherentDimer-module.html#delta_10x,Variable lib.systems.joel.incoherentDimer.delta_10x=lib.systems.joel.incoherentDimer-module.html#delta_10x,Variable lib.systems.joel.monomer.delta_10x=lib.systems.joel.monomer-module.html#delta_10x,Variable lib.systems.joel.simplifiedMonomer.delta_10x=lib.systems.joel.simplifiedMonomer-module.html#delta_10x"><a title="lib.systems.joel.coherentDimer.delta_10x
+lib.systems.joel.incoherentDimer.delta_10x
+lib.systems.joel.monomer.delta_10x
+lib.systems.joel.simplifiedMonomer.delta_10x" class="py-name" href="#" onclick="return doclink('link-47', 'delta_10x', 'link-47');">delta_10x</a></tt> <tt class="py-op">=</tt> <tt id="link-48" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-48', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-49', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-50', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">100</tt><tt class="py-op">)</tt> <tt class="py-comment">#joel-distance-units </tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt id="link-51" class="py-name" targets="Variable lib.systems.joel.coherentDimer.delta_10y=lib.systems.joel.coherentDimer-module.html#delta_10y,Variable lib.systems.joel.incoherentDimer.delta_10y=lib.systems.joel.incoherentDimer-module.html#delta_10y,Variable lib.systems.joel.monomer.delta_10y=lib.systems.joel.monomer-module.html#delta_10y,Variable lib.systems.joel.simplifiedMonomer.delta_10y=lib.systems.joel.simplifiedMonomer-module.html#delta_10y"><a title="lib.systems.joel.coherentDimer.delta_10y
+lib.systems.joel.incoherentDimer.delta_10y
+lib.systems.joel.monomer.delta_10y
+lib.systems.joel.simplifiedMonomer.delta_10y" class="py-name" href="#" onclick="return doclink('link-51', 'delta_10y', 'link-51');">delta_10y</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-comment">#not used here</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt id="link-52" class="py-name" targets="Variable lib.systems.joel.coherentDimer.delta_01x=lib.systems.joel.coherentDimer-module.html#delta_01x,Variable lib.systems.joel.incoherentDimer.delta_01x=lib.systems.joel.incoherentDimer-module.html#delta_01x,Variable lib.systems.joel.monomer.delta_01x=lib.systems.joel.monomer-module.html#delta_01x,Variable lib.systems.joel.simplifiedMonomer.delta_01x=lib.systems.joel.simplifiedMonomer-module.html#delta_01x"><a title="lib.systems.joel.coherentDimer.delta_01x
+lib.systems.joel.incoherentDimer.delta_01x
+lib.systems.joel.monomer.delta_01x
+lib.systems.joel.simplifiedMonomer.delta_01x" class="py-name" href="#" onclick="return doclink('link-52', 'delta_01x', 'link-52');">delta_01x</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt id="link-53" class="py-name" targets="Variable lib.systems.joel.coherentDimer.delta_01y=lib.systems.joel.coherentDimer-module.html#delta_01y,Variable lib.systems.joel.incoherentDimer.delta_01y=lib.systems.joel.incoherentDimer-module.html#delta_01y,Variable lib.systems.joel.monomer.delta_01y=lib.systems.joel.monomer-module.html#delta_01y,Variable lib.systems.joel.simplifiedMonomer.delta_01y=lib.systems.joel.simplifiedMonomer-module.html#delta_01y"><a title="lib.systems.joel.coherentDimer.delta_01y
+lib.systems.joel.incoherentDimer.delta_01y
+lib.systems.joel.monomer.delta_01y
+lib.systems.joel.simplifiedMonomer.delta_01y" class="py-name" href="#" onclick="return doclink('link-53', 'delta_01y', 'link-53');">delta_01y</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt id="link-54" class="py-name" targets="Variable lib.systems.joel.coherentDimer.pulse_width_stdev=lib.systems.joel.coherentDimer-module.html#pulse_width_stdev,Variable lib.systems.joel.incoherentDimer.pulse_width_stdev=lib.systems.joel.incoherentDimer-module.html#pulse_width_stdev,Variable lib.systems.joel.monomer.pulse_width_stdev=lib.systems.joel.monomer-module.html#pulse_width_stdev,Variable lib.systems.joel.simplifiedMonomer.pulse_width_stdev=lib.systems.joel.simplifiedMonomer-module.html#pulse_width_stdev"><a title="lib.systems.joel.coherentDimer.pulse_width_stdev
+lib.systems.joel.incoherentDimer.pulse_width_stdev
+lib.systems.joel.monomer.pulse_width_stdev
+lib.systems.joel.simplifiedMonomer.pulse_width_stdev" class="py-name" href="#" onclick="return doclink('link-54', 'pulse_width_stdev', 'link-54');">pulse_width_stdev</a></tt> <tt class="py-op">=</tt> <tt class="py-number">10.0</tt> <tt class="py-op">/</tt> <tt class="py-op">(</tt><tt class="py-number">2.0</tt> <tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sqrt</tt><tt class="py-op">(</tt><tt class="py-number">2.0</tt> <tt class="py-op">*</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">log</tt><tt class="py-op">(</tt><tt class="py-number">2.0</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-op">*</tt> <tt class="py-number">1.0E-15</tt> <tt class="py-comment">#femtoseconds</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-keyword">print</tt> <tt class="py-string">"Monomer pulse stdev"</tt><tt class="py-op">,</tt> <tt id="link-55" class="py-name"><a title="lib.systems.joel.coherentDimer.pulse_width_stdev
+lib.systems.joel.incoherentDimer.pulse_width_stdev
+lib.systems.joel.monomer.pulse_width_stdev
+lib.systems.joel.simplifiedMonomer.pulse_width_stdev" class="py-name" href="#" onclick="return doclink('link-55', 'pulse_width_stdev', 'link-54');">pulse_width_stdev</a></tt><tt class="py-op">,</tt> <tt class="py-string">"seconds"</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt id="link-56" class="py-name"><a title="lib.systems.joel.coherentDimer.pulse_width_stdev
+lib.systems.joel.incoherentDimer.pulse_width_stdev
+lib.systems.joel.monomer.pulse_width_stdev
+lib.systems.joel.simplifiedMonomer.pulse_width_stdev" class="py-name" href="#" onclick="return doclink('link-56', 'pulse_width_stdev', 'link-54');">pulse_width_stdev</a></tt> <tt class="py-op">=</tt>  <tt id="link-57" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-57', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-58', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-59" class="py-name" targets="Method lib.Spacetime.unitHandler.timeUnitsFromSeconds()=lib.Spacetime.unitHandler-class.html#timeUnitsFromSeconds"><a title="lib.Spacetime.unitHandler.timeUnitsFromSeconds" class="py-name" href="#" onclick="return doclink('link-59', 'timeUnitsFromSeconds', 'link-59');">timeUnitsFromSeconds</a></tt><tt class="py-op">(</tt><tt id="link-60" class="py-name"><a title="lib.systems.joel.coherentDimer.pulse_width_stdev
+lib.systems.joel.incoherentDimer.pulse_width_stdev
+lib.systems.joel.monomer.pulse_width_stdev
+lib.systems.joel.simplifiedMonomer.pulse_width_stdev" class="py-name" href="#" onclick="return doclink('link-60', 'pulse_width_stdev', 'link-54');">pulse_width_stdev</a></tt><tt class="py-op">)</tt>  <tt class="py-comment">#joel-time-units</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">              </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-61" class="py-name" targets="Variable lib.systems.joel.coherentDimer.xOscillatorGround=lib.systems.joel.coherentDimer-module.html#xOscillatorGround,Variable lib.systems.joel.incoherentDimer.xOscillatorGround=lib.systems.joel.incoherentDimer-module.html#xOscillatorGround,Variable lib.systems.joel.monomer.xOscillatorGround=lib.systems.joel.monomer-module.html#xOscillatorGround,Variable lib.systems.joel.simplifiedMonomer.xOscillatorGround=lib.systems.joel.simplifiedMonomer-module.html#xOscillatorGround"><a title="lib.systems.joel.coherentDimer.xOscillatorGround
+lib.systems.joel.incoherentDimer.xOscillatorGround
+lib.systems.joel.monomer.xOscillatorGround
+lib.systems.joel.simplifiedMonomer.xOscillatorGround" class="py-name" href="#" onclick="return doclink('link-61', 'xOscillatorGround', 'link-61');">xOscillatorGround</a></tt> <tt class="py-op">=</tt> <tt id="link-62" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-62', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-63" class="py-name" targets="Class lib.NuclearOperator.harmonicOscillator=lib.NuclearOperator.harmonicOscillator-class.html"><a title="lib.NuclearOperator.harmonicOscillator" class="py-name" href="#" onclick="return doclink('link-63', 'harmonicOscillator', 'link-63');">harmonicOscillator</a></tt><tt class="py-op">(</tt><tt id="link-64" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-64', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">                                                         <tt class="py-name">omega</tt> <tt class="py-op">=</tt> <tt id="link-65" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_00x
+lib.systems.joel.incoherentDimer.omega_00x
+lib.systems.joel.monomer.omega_00x
+lib.systems.joel.simplifiedMonomer.omega_00x" class="py-name" href="#" onclick="return doclink('link-65', 'omega_00x', 'link-30');">omega_00x</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">                                                         <tt class="py-name">center</tt> <tt class="py-op">=</tt> <tt id="link-66" class="py-name"><a title="lib.systems.joel.coherentDimer.delta_00x
+lib.systems.joel.incoherentDimer.delta_00x
+lib.systems.joel.monomer.delta_00x
+lib.systems.joel.simplifiedMonomer.delta_00x" class="py-name" href="#" onclick="return doclink('link-66', 'delta_00x', 'link-45');">delta_00x</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">                                                         <tt id="link-67" class="py-name" targets="Variable lib.systems.iodine.dimerHighlyCoupled.energyOffset=lib.systems.iodine.dimerHighlyCoupled-module.html#energyOffset,Variable lib.systems.iodine.monomer.energyOffset=lib.systems.iodine.monomer-module.html#energyOffset,Variable lib.systems.iodine.monomer_Accurate.energyOffset=lib.systems.iodine.monomer_Accurate-module.html#energyOffset,Variable lib.systems.iodine.monomer_s0_div_100.energyOffset=lib.systems.iodine.monomer_s0_div_100-module.html#energyOffset"><a title="lib.systems.iodine.dimerHighlyCoupled.energyOffset
+lib.systems.iodine.monomer.energyOffset
+lib.systems.iodine.monomer_Accurate.energyOffset
+lib.systems.iodine.monomer_s0_div_100.energyOffset" class="py-name" href="#" onclick="return doclink('link-67', 'energyOffset', 'link-67');">energyOffset</a></tt> <tt class="py-op">=</tt> <tt id="link-68" class="py-name"><a title="lib.systems.joel.coherentDimer.E_00
+lib.systems.joel.incoherentDimer.E_00
+lib.systems.joel.monomer.E_00
+lib.systems.joel.simplifiedMonomer.E_00" class="py-name" href="#" onclick="return doclink('link-68', 'E_00', 'link-17');">E_00</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-69" class="py-name" targets="Variable lib.systems.joel.coherentDimer.yOscillatorGround=lib.systems.joel.coherentDimer-module.html#yOscillatorGround,Variable lib.systems.joel.incoherentDimer.yOscillatorGround=lib.systems.joel.incoherentDimer-module.html#yOscillatorGround,Variable lib.systems.joel.monomer.yOscillatorGround=lib.systems.joel.monomer-module.html#yOscillatorGround"><a title="lib.systems.joel.coherentDimer.yOscillatorGround
+lib.systems.joel.incoherentDimer.yOscillatorGround
+lib.systems.joel.monomer.yOscillatorGround" class="py-name" href="#" onclick="return doclink('link-69', 'yOscillatorGround', 'link-69');">yOscillatorGround</a></tt> <tt class="py-op">=</tt> <tt id="link-70" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-70', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-71" class="py-name"><a title="lib.NuclearOperator.harmonicOscillator" class="py-name" href="#" onclick="return doclink('link-71', 'harmonicOscillator', 'link-63');">harmonicOscillator</a></tt><tt class="py-op">(</tt><tt id="link-72" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-72', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">                                                         <tt class="py-name">omega</tt> <tt class="py-op">=</tt> <tt id="link-73" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_00y
+lib.systems.joel.incoherentDimer.omega_00y
+lib.systems.joel.monomer.omega_00y
+lib.systems.joel.simplifiedMonomer.omega_00y" class="py-name" href="#" onclick="return doclink('link-73', 'omega_00y', 'link-31');">omega_00y</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                                                         <tt class="py-name">center</tt> <tt class="py-op">=</tt> <tt id="link-74" class="py-name"><a title="lib.systems.joel.coherentDimer.delta_00y
+lib.systems.joel.incoherentDimer.delta_00y
+lib.systems.joel.monomer.delta_00y
+lib.systems.joel.simplifiedMonomer.delta_00y" class="py-name" href="#" onclick="return doclink('link-74', 'delta_00y', 'link-46');">delta_00y</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">                                                         <tt id="link-75" class="py-name"><a title="lib.systems.iodine.dimerHighlyCoupled.energyOffset
+lib.systems.iodine.monomer.energyOffset
+lib.systems.iodine.monomer_Accurate.energyOffset
+lib.systems.iodine.monomer_s0_div_100.energyOffset" class="py-name" href="#" onclick="return doclink('link-75', 'energyOffset', 'link-67');">energyOffset</a></tt> <tt class="py-op">=</tt> <tt id="link-76" class="py-name"><a title="lib.systems.joel.coherentDimer.E_00
+lib.systems.joel.incoherentDimer.E_00
+lib.systems.joel.monomer.E_00
+lib.systems.joel.simplifiedMonomer.E_00" class="py-name" href="#" onclick="return doclink('link-76', 'E_00', 'link-17');">E_00</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt id="link-77" class="py-name" targets="Variable lib.systems.joel.coherentDimer.xOscillatorExcited=lib.systems.joel.coherentDimer-module.html#xOscillatorExcited,Variable lib.systems.joel.incoherentDimer.xOscillatorExcited=lib.systems.joel.incoherentDimer-module.html#xOscillatorExcited,Variable lib.systems.joel.monomer.xOscillatorExcited=lib.systems.joel.monomer-module.html#xOscillatorExcited,Variable lib.systems.joel.simplifiedMonomer.xOscillatorExcited=lib.systems.joel.simplifiedMonomer-module.html#xOscillatorExcited"><a title="lib.systems.joel.coherentDimer.xOscillatorExcited
+lib.systems.joel.incoherentDimer.xOscillatorExcited
+lib.systems.joel.monomer.xOscillatorExcited
+lib.systems.joel.simplifiedMonomer.xOscillatorExcited" class="py-name" href="#" onclick="return doclink('link-77', 'xOscillatorExcited', 'link-77');">xOscillatorExcited</a></tt> <tt class="py-op">=</tt> <tt id="link-78" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-78', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-79" class="py-name"><a title="lib.NuclearOperator.harmonicOscillator" class="py-name" href="#" onclick="return doclink('link-79', 'harmonicOscillator', 'link-63');">harmonicOscillator</a></tt><tt class="py-op">(</tt><tt id="link-80" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-80', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">                                                         <tt class="py-name">omega</tt> <tt class="py-op">=</tt> <tt id="link-81" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_10x
+lib.systems.joel.incoherentDimer.omega_10x
+lib.systems.joel.monomer.omega_10x
+lib.systems.joel.simplifiedMonomer.omega_10x" class="py-name" href="#" onclick="return doclink('link-81', 'omega_10x', 'link-35');">omega_10x</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">                                                         <tt class="py-name">center</tt> <tt class="py-op">=</tt> <tt id="link-82" class="py-name"><a title="lib.systems.joel.coherentDimer.delta_10x
+lib.systems.joel.incoherentDimer.delta_10x
+lib.systems.joel.monomer.delta_10x
+lib.systems.joel.simplifiedMonomer.delta_10x" class="py-name" href="#" onclick="return doclink('link-82', 'delta_10x', 'link-47');">delta_10x</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">                                                         <tt id="link-83" class="py-name"><a title="lib.systems.iodine.dimerHighlyCoupled.energyOffset
+lib.systems.iodine.monomer.energyOffset
+lib.systems.iodine.monomer_Accurate.energyOffset
+lib.systems.iodine.monomer_s0_div_100.energyOffset" class="py-name" href="#" onclick="return doclink('link-83', 'energyOffset', 'link-67');">energyOffset</a></tt> <tt class="py-op">=</tt> <tt id="link-84" class="py-name"><a title="lib.systems.joel.coherentDimer.E_00
+lib.systems.joel.incoherentDimer.E_00
+lib.systems.joel.monomer.E_00
+lib.systems.joel.simplifiedMonomer.E_00" class="py-name" href="#" onclick="return doclink('link-84', 'E_00', 'link-17');">E_00</a></tt><tt class="py-op">)</tt> <tt class="py-comment">#make this energy offset 0 and give it all to the other</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt id="link-85" class="py-name" targets="Variable lib.systems.joel.coherentDimer.yOscillatorExcited=lib.systems.joel.coherentDimer-module.html#yOscillatorExcited,Variable lib.systems.joel.incoherentDimer.yOscillatorExcited=lib.systems.joel.incoherentDimer-module.html#yOscillatorExcited,Variable lib.systems.joel.monomer.yOscillatorExcited=lib.systems.joel.monomer-module.html#yOscillatorExcited"><a title="lib.systems.joel.coherentDimer.yOscillatorExcited
+lib.systems.joel.incoherentDimer.yOscillatorExcited
+lib.systems.joel.monomer.yOscillatorExcited" class="py-name" href="#" onclick="return doclink('link-85', 'yOscillatorExcited', 'link-85');">yOscillatorExcited</a></tt> <tt class="py-op">=</tt> <tt id="link-86" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-86', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-87" class="py-name"><a title="lib.NuclearOperator.harmonicOscillator" class="py-name" href="#" onclick="return doclink('link-87', 'harmonicOscillator', 'link-63');">harmonicOscillator</a></tt><tt class="py-op">(</tt><tt id="link-88" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-88', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                                                         <tt class="py-name">omega</tt> <tt class="py-op">=</tt> <tt id="link-89" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_10y
+lib.systems.joel.incoherentDimer.omega_10y
+lib.systems.joel.monomer.omega_10y
+lib.systems.joel.simplifiedMonomer.omega_10y" class="py-name" href="#" onclick="return doclink('link-89', 'omega_10y', 'link-40');">omega_10y</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                                                         <tt class="py-name">center</tt> <tt class="py-op">=</tt> <tt id="link-90" class="py-name"><a title="lib.systems.joel.coherentDimer.delta_10y
+lib.systems.joel.incoherentDimer.delta_10y
+lib.systems.joel.monomer.delta_10y
+lib.systems.joel.simplifiedMonomer.delta_10y" class="py-name" href="#" onclick="return doclink('link-90', 'delta_10y', 'link-51');">delta_10y</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">                                                         <tt id="link-91" class="py-name"><a title="lib.systems.iodine.dimerHighlyCoupled.energyOffset
+lib.systems.iodine.monomer.energyOffset
+lib.systems.iodine.monomer_Accurate.energyOffset
+lib.systems.iodine.monomer_s0_div_100.energyOffset" class="py-name" href="#" onclick="return doclink('link-91', 'energyOffset', 'link-67');">energyOffset</a></tt> <tt class="py-op">=</tt> <tt id="link-92" class="py-name"><a title="lib.systems.joel.coherentDimer.E_10
+lib.systems.joel.incoherentDimer.E_10
+lib.systems.joel.monomer.E_10
+lib.systems.joel.simplifiedMonomer.E_10" class="py-name" href="#" onclick="return doclink('link-92', 'E_10', 'link-25');">E_10</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">   </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt id="link-93" class="py-name" targets="Variable lib.systems.joel.coherentDimer.groundStateNuclearHamiltonian=lib.systems.joel.coherentDimer-module.html#groundStateNuclearHamiltonian,Variable lib.systems.joel.incoherentDimer.groundStateNuclearHamiltonian=lib.systems.joel.incoherentDimer-module.html#groundStateNuclearHamiltonian,Variable lib.systems.joel.monomer.groundStateNuclearHamiltonian=lib.systems.joel.monomer-module.html#groundStateNuclearHamiltonian,Variable lib.systems.joel.simplifiedMonomer.groundStateNuclearHamiltonian=lib.systems.joel.simplifiedMonomer-module.html#groundStateNuclearHamiltonian"><a title="lib.systems.joel.coherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.incoherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.monomer.groundStateNuclearHamiltonian
+lib.systems.joel.simplifiedMonomer.groundStateNuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-93', 'groundStateNuclearHamiltonian', 'link-93');">groundStateNuclearHamiltonian</a></tt> <tt class="py-op">=</tt> <tt id="link-94" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-94', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-95" class="py-name" targets="Class lib.NuclearOperator.nuclearHamiltonian=lib.NuclearOperator.nuclearHamiltonian-class.html"><a title="lib.NuclearOperator.nuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-95', 'nuclearHamiltonian', 'link-95');">nuclearHamiltonian</a></tt><tt class="py-op">(</tt><tt id="link-96" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-96', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt class="py-name">listOfOneDimensionalHamiltonians</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-97" class="py-name"><a title="lib.systems.joel.coherentDimer.xOscillatorGround
+lib.systems.joel.incoherentDimer.xOscillatorGround
+lib.systems.joel.monomer.xOscillatorGround
+lib.systems.joel.simplifiedMonomer.xOscillatorGround" class="py-name" href="#" onclick="return doclink('link-97', 'xOscillatorGround', 'link-61');">xOscillatorGround</a></tt><tt class="py-op">,</tt> <tt id="link-98" class="py-name"><a title="lib.systems.joel.coherentDimer.yOscillatorGround
+lib.systems.joel.incoherentDimer.yOscillatorGround
+lib.systems.joel.monomer.yOscillatorGround" class="py-name" href="#" onclick="return doclink('link-98', 'yOscillatorGround', 'link-69');">yOscillatorGround</a></tt><tt class="py-op">]</tt> <tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt id="link-99" class="py-name" targets="Variable lib.systems.joel.monomer.excitedStateNuclearHamiltonian=lib.systems.joel.monomer-module.html#excitedStateNuclearHamiltonian,Variable lib.systems.joel.simplifiedMonomer.excitedStateNuclearHamiltonian=lib.systems.joel.simplifiedMonomer-module.html#excitedStateNuclearHamiltonian"><a title="lib.systems.joel.monomer.excitedStateNuclearHamiltonian
+lib.systems.joel.simplifiedMonomer.excitedStateNuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-99', 'excitedStateNuclearHamiltonian', 'link-99');">excitedStateNuclearHamiltonian</a></tt> <tt class="py-op">=</tt> <tt id="link-100" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-100', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-101" class="py-name"><a title="lib.NuclearOperator.nuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-101', 'nuclearHamiltonian', 'link-95');">nuclearHamiltonian</a></tt><tt class="py-op">(</tt><tt id="link-102" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-102', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt class="py-name">listOfOneDimensionalHamiltonians</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-103" class="py-name"><a title="lib.systems.joel.coherentDimer.xOscillatorExcited
+lib.systems.joel.incoherentDimer.xOscillatorExcited
+lib.systems.joel.monomer.xOscillatorExcited
+lib.systems.joel.simplifiedMonomer.xOscillatorExcited" class="py-name" href="#" onclick="return doclink('link-103', 'xOscillatorExcited', 'link-77');">xOscillatorExcited</a></tt><tt class="py-op">,</tt> <tt id="link-104" class="py-name"><a title="lib.systems.joel.coherentDimer.yOscillatorExcited
+lib.systems.joel.incoherentDimer.yOscillatorExcited
+lib.systems.joel.monomer.yOscillatorExcited" class="py-name" href="#" onclick="return doclink('link-104', 'yOscillatorExcited', 'link-85');">yOscillatorExcited</a></tt><tt class="py-op">]</tt> <tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt id="link-105" class="py-name" targets="Variable lib.systems.joel.coherentDimer.groundStateNuclearWavefunction=lib.systems.joel.coherentDimer-module.html#groundStateNuclearWavefunction,Variable lib.systems.joel.incoherentDimer.groundStateNuclearWavefunction=lib.systems.joel.incoherentDimer-module.html#groundStateNuclearWavefunction,Variable lib.systems.joel.monomer.groundStateNuclearWavefunction=lib.systems.joel.monomer-module.html#groundStateNuclearWavefunction,Variable lib.systems.joel.simplifiedMonomer.groundStateNuclearWavefunction=lib.systems.joel.simplifiedMonomer-module.html#groundStateNuclearWavefunction"><a title="lib.systems.joel.coherentDimer.groundStateNuclearWavefunction
+lib.systems.joel.incoherentDimer.groundStateNuclearWavefunction
+lib.systems.joel.monomer.groundStateNuclearWavefunction
+lib.systems.joel.simplifiedMonomer.groundStateNuclearWavefunction" class="py-name" href="#" onclick="return doclink('link-105', 'groundStateNuclearWavefunction', 'link-105');">groundStateNuclearWavefunction</a></tt> <tt class="py-op">=</tt> <tt id="link-106" class="py-name"><a title="lib.NuclearWavefunction" class="py-name" href="#" onclick="return doclink('link-106', 'NuclearWavefunction', 'link-4');">NuclearWavefunction</a></tt><tt class="py-op">.</tt><tt id="link-107" class="py-name" targets="Class lib.NuclearWavefunction.nuclearWavefunction=lib.NuclearWavefunction.nuclearWavefunction-class.html"><a title="lib.NuclearWavefunction.nuclearWavefunction" class="py-name" href="#" onclick="return doclink('link-107', 'nuclearWavefunction', 'link-107');">nuclearWavefunction</a></tt><tt class="py-op">(</tt><tt id="link-108" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-108', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt id="link-109" class="py-name"><a title="lib.systems.joel.coherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.incoherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.monomer.groundStateNuclearHamiltonian
+lib.systems.joel.simplifiedMonomer.groundStateNuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-109', 'groundStateNuclearHamiltonian', 'link-93');">groundStateNuclearHamiltonian</a></tt> <tt class="py-op">=</tt> <tt id="link-110" class="py-name"><a title="lib.systems.joel.coherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.incoherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.monomer.groundStateNuclearHamiltonian
+lib.systems.joel.simplifiedMonomer.groundStateNuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-110', 'groundStateNuclearHamiltonian', 'link-93');">groundStateNuclearHamiltonian</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt id="link-111" class="py-name" targets="Variable lib.systems.joel.coherentDimer.electronicHamiltonian=lib.systems.joel.coherentDimer-module.html#electronicHamiltonian,Variable lib.systems.joel.incoherentDimer.electronicHamiltonian=lib.systems.joel.incoherentDimer-module.html#electronicHamiltonian,Variable lib.systems.joel.monomer.electronicHamiltonian=lib.systems.joel.monomer-module.html#electronicHamiltonian,Variable lib.systems.joel.simplifiedMonomer.electronicHamiltonian=lib.systems.joel.simplifiedMonomer-module.html#electronicHamiltonian"><a title="lib.systems.joel.coherentDimer.electronicHamiltonian
+lib.systems.joel.incoherentDimer.electronicHamiltonian
+lib.systems.joel.monomer.electronicHamiltonian
+lib.systems.joel.simplifiedMonomer.electronicHamiltonian" class="py-name" href="#" onclick="return doclink('link-111', 'electronicHamiltonian', 'link-111');">electronicHamiltonian</a></tt> <tt class="py-op">=</tt> <tt id="link-112" class="py-name"><a title="lib.ElectronicOperator
+lib.ElectronicOperator.ElectronicOperator" class="py-name" href="#" onclick="return doclink('link-112', 'ElectronicOperator', 'link-2');">ElectronicOperator</a></tt><tt class="py-op">.</tt><tt id="link-113" class="py-name" targets="Class lib.ElectronicOperator.ElectronicHamiltonian=lib.ElectronicOperator.ElectronicHamiltonian-class.html,Variable lib.systems.Allan.coherentDimer.ElectronicHamiltonian=lib.systems.Allan.coherentDimer-module.html#ElectronicHamiltonian,Variable lib.systems.Allan.monomer.ElectronicHamiltonian=lib.systems.Allan.monomer-module.html#ElectronicHamiltonian,Variable lib.systems.Jacob.witnessBreaker.ElectronicHamiltonian=lib.systems.Jacob.witnessBreaker-module.html#ElectronicHamiltonian,Variable lib.systems.Juergen.one_fast_mode_monomer.ElectronicHamiltonian=lib.systems.Juergen.one_fast_mode_monomer-module.html#ElectronicHamiltonian,Variable lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.ElectronicHamiltonian=lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES-module.html#ElectronicHamiltonian,Variable lib.systems.Juergen.one_mode_monomer.ElectronicHamiltonian=lib.systems.Juergen.one_mode_monomer-module.html#ElectronicHamiltonian,Variable lib.systems.Juergen.two_mode_dimer_detuned.ElectronicHamiltonian=lib.systems.Juergen.two_mode_dimer_detuned-module.html#ElectronicHamiltonian,Variable lib.systems.Juergen.two_mode_monomer.ElectronicHamiltonian=lib.systems.Juergen.two_mode_monomer-module.html#ElectronicHamiltonian,Variable lib.systems.Juergen.two_mode_monomer_detuned.ElectronicHamiltonian=lib.systems.Juergen.two_mode_monomer_detuned-module.html#ElectronicHamiltonian,Variable lib.systems.MgC.MgC.ElectronicHamiltonian=lib.systems.MgC.MgC-module.html#ElectronicHamiltonian,Variable lib.systems.iodine.monomer_ho.ElectronicHamiltonian=lib.systems.iodine.monomer_ho-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.coherentDimer.ElectronicHamiltonian=lib.systems.naturalNonCondon.coherentDimer-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomer.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomer-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomerDoubleMass.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomerDoubleMass-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomer_S_0.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomer_S_0-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomer_S_0_005.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomer_S_0_005-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomer_S_0_2.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomer_S_0_2-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomer_S_1.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomer_S_1-module.html#ElectronicHamiltonian,Variable lib.systems.naturalNonCondon.monomer_S_10.ElectronicHamiltonian=lib.systems.naturalNonCondon.monomer_S_10-module.html#ElectronicHamiltonian"><a title="lib.ElectronicOperator.ElectronicHamiltonian
+lib.systems.Allan.coherentDimer.ElectronicHamiltonian
+lib.systems.Allan.monomer.ElectronicHamiltonian
+lib.systems.Jacob.witnessBreaker.ElectronicHamiltonian
+lib.systems.Juergen.one_fast_mode_monomer.ElectronicHamiltonian
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.ElectronicHamiltonian
+lib.systems.Juergen.one_mode_monomer.ElectronicHamiltonian
+lib.systems.Juergen.two_mode_dimer_detuned.ElectronicHamiltonian
+lib.systems.Juergen.two_mode_monomer.ElectronicHamiltonian
+lib.systems.Juergen.two_mode_monomer_detuned.ElectronicHamiltonian
+lib.systems.MgC.MgC.ElectronicHamiltonian
+lib.systems.iodine.monomer_ho.ElectronicHamiltonian
+lib.systems.naturalNonCondon.coherentDimer.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomer.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomerDoubleMass.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomer_S_0.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomer_S_0_005.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomer_S_0_2.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomer_S_1.ElectronicHamiltonian
+lib.systems.naturalNonCondon.monomer_S_10.ElectronicHamiltonian" class="py-name" href="#" onclick="return doclink('link-113', 'ElectronicHamiltonian', 'link-113');">ElectronicHamiltonian</a></tt><tt class="py-op">(</tt><tt id="link-114" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-114', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt id="link-115" class="py-name"><a title="lib.systems.joel.coherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.incoherentDimer.groundStateNuclearHamiltonian
+lib.systems.joel.monomer.groundStateNuclearHamiltonian
+lib.systems.joel.simplifiedMonomer.groundStateNuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-115', 'groundStateNuclearHamiltonian', 'link-93');">groundStateNuclearHamiltonian</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt>  </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">                                                            <tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt id="link-116" class="py-name"><a title="lib.systems.joel.monomer.excitedStateNuclearHamiltonian
+lib.systems.joel.simplifiedMonomer.excitedStateNuclearHamiltonian" class="py-name" href="#" onclick="return doclink('link-116', 'excitedStateNuclearHamiltonian', 'link-99');">excitedStateNuclearHamiltonian</a></tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">                                                             </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                                                             </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt id="link-117" class="py-name" targets="Variable lib.systems.joel.coherentDimer.initialElectronicWavefunction=lib.systems.joel.coherentDimer-module.html#initialElectronicWavefunction,Variable lib.systems.joel.incoherentDimer.initialElectronicWavefunction=lib.systems.joel.incoherentDimer-module.html#initialElectronicWavefunction,Variable lib.systems.joel.monomer.initialElectronicWavefunction=lib.systems.joel.monomer-module.html#initialElectronicWavefunction,Variable lib.systems.joel.simplifiedMonomer.initialElectronicWavefunction=lib.systems.joel.simplifiedMonomer-module.html#initialElectronicWavefunction"><a title="lib.systems.joel.coherentDimer.initialElectronicWavefunction
+lib.systems.joel.incoherentDimer.initialElectronicWavefunction
+lib.systems.joel.monomer.initialElectronicWavefunction
+lib.systems.joel.simplifiedMonomer.initialElectronicWavefunction" class="py-name" href="#" onclick="return doclink('link-117', 'initialElectronicWavefunction', 'link-117');">initialElectronicWavefunction</a></tt> <tt class="py-op">=</tt> <tt id="link-118" class="py-name"><a title="lib.ElectronicWavefunction" class="py-name" href="#" onclick="return doclink('link-118', 'ElectronicWavefunction', 'link-8');">ElectronicWavefunction</a></tt><tt class="py-op">.</tt><tt id="link-119" class="py-name" targets="Class lib.ElectronicWavefunction.electronicWavefunction=lib.ElectronicWavefunction.electronicWavefunction-class.html"><a title="lib.ElectronicWavefunction.electronicWavefunction" class="py-name" href="#" onclick="return doclink('link-119', 'electronicWavefunction', 'link-119');">electronicWavefunction</a></tt><tt class="py-op">(</tt><tt id="link-120" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-120', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                                                                               <tt class="py-name">listOfNuclearWavefunctions</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-121" class="py-name"><a title="lib.systems.joel.coherentDimer.groundStateNuclearWavefunction
+lib.systems.joel.incoherentDimer.groundStateNuclearWavefunction
+lib.systems.joel.monomer.groundStateNuclearWavefunction
+lib.systems.joel.simplifiedMonomer.groundStateNuclearWavefunction" class="py-name" href="#" onclick="return doclink('link-121', 'groundStateNuclearWavefunction', 'link-105');">groundStateNuclearWavefunction</a></tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                                                                               <tt class="py-name">Normalize</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">                      </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt id="link-122" class="py-name" targets="Variable lib.systems.joel.coherentDimer.xTransitionDipoleValue=lib.systems.joel.coherentDimer-module.html#xTransitionDipoleValue,Variable lib.systems.joel.incoherentDimer.xTransitionDipoleValue=lib.systems.joel.incoherentDimer-module.html#xTransitionDipoleValue,Variable lib.systems.joel.monomer.xTransitionDipoleValue=lib.systems.joel.monomer-module.html#xTransitionDipoleValue,Variable lib.systems.joel.simplifiedMonomer.xTransitionDipoleValue=lib.systems.joel.simplifiedMonomer-module.html#xTransitionDipoleValue"><a title="lib.systems.joel.coherentDimer.xTransitionDipoleValue
+lib.systems.joel.incoherentDimer.xTransitionDipoleValue
+lib.systems.joel.monomer.xTransitionDipoleValue
+lib.systems.joel.simplifiedMonomer.xTransitionDipoleValue" class="py-name" href="#" onclick="return doclink('link-122', 'xTransitionDipoleValue', 'link-122');">xTransitionDipoleValue</a></tt> <tt class="py-op">=</tt> <tt class="py-number">1.0</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt id="link-123" class="py-name" targets="Variable lib.systems.joel.coherentDimer.yTransitionDipoleValue=lib.systems.joel.coherentDimer-module.html#yTransitionDipoleValue,Variable lib.systems.joel.incoherentDimer.yTransitionDipoleValue=lib.systems.joel.incoherentDimer-module.html#yTransitionDipoleValue,Variable lib.systems.joel.monomer.yTransitionDipoleValue=lib.systems.joel.monomer-module.html#yTransitionDipoleValue,Variable lib.systems.joel.simplifiedMonomer.yTransitionDipoleValue=lib.systems.joel.simplifiedMonomer-module.html#yTransitionDipoleValue"><a title="lib.systems.joel.coherentDimer.yTransitionDipoleValue
+lib.systems.joel.incoherentDimer.yTransitionDipoleValue
+lib.systems.joel.monomer.yTransitionDipoleValue
+lib.systems.joel.simplifiedMonomer.yTransitionDipoleValue" class="py-name" href="#" onclick="return doclink('link-123', 'yTransitionDipoleValue', 'link-123');">yTransitionDipoleValue</a></tt> <tt class="py-op">=</tt> <tt class="py-number">3.0</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt id="link-124" class="py-name" targets="Variable lib.systems.joel.coherentDimer.xTransitionDipoleNuclearOperator=lib.systems.joel.coherentDimer-module.html#xTransitionDipoleNuclearOperator,Variable lib.systems.joel.incoherentDimer.xTransitionDipoleNuclearOperator=lib.systems.joel.incoherentDimer-module.html#xTransitionDipoleNuclearOperator,Variable lib.systems.joel.monomer.xTransitionDipoleNuclearOperator=lib.systems.joel.monomer-module.html#xTransitionDipoleNuclearOperator,Variable lib.systems.joel.simplifiedMonomer.xTransitionDipoleNuclearOperator=lib.systems.joel.simplifiedMonomer-module.html#xTransitionDipoleNuclearOperator"><a title="lib.systems.joel.coherentDimer.xTransitionDipoleNuclearOperator
+lib.systems.joel.incoherentDimer.xTransitionDipoleNuclearOperator
+lib.systems.joel.monomer.xTransitionDipoleNuclearOperator
+lib.systems.joel.simplifiedMonomer.xTransitionDipoleNuclearOperator" class="py-name" href="#" onclick="return doclink('link-124', 'xTransitionDipoleNuclearOperator', 'link-124');">xTransitionDipoleNuclearOperator</a></tt> <tt class="py-op">=</tt> <tt id="link-125" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-125', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-126" class="py-name" targets="Class lib.NuclearOperator.constantPositionNuclearOperator=lib.NuclearOperator.constantPositionNuclearOperator-class.html"><a title="lib.NuclearOperator.constantPositionNuclearOperator" class="py-name" href="#" onclick="return doclink('link-126', 'constantPositionNuclearOperator', 'link-126');">constantPositionNuclearOperator</a></tt><tt class="py-op">(</tt><tt id="link-127" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-127', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt id="link-128" class="py-name"><a title="lib.systems.joel.coherentDimer.xTransitionDipoleValue
+lib.systems.joel.incoherentDimer.xTransitionDipoleValue
+lib.systems.joel.monomer.xTransitionDipoleValue
+lib.systems.joel.simplifiedMonomer.xTransitionDipoleValue" class="py-name" href="#" onclick="return doclink('link-128', 'xTransitionDipoleValue', 'link-122');">xTransitionDipoleValue</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt id="link-129" class="py-name" targets="Variable lib.systems.joel.coherentDimer.yTransitionDipoleNuclearOperator=lib.systems.joel.coherentDimer-module.html#yTransitionDipoleNuclearOperator,Variable lib.systems.joel.incoherentDimer.yTransitionDipoleNuclearOperator=lib.systems.joel.incoherentDimer-module.html#yTransitionDipoleNuclearOperator,Variable lib.systems.joel.monomer.yTransitionDipoleNuclearOperator=lib.systems.joel.monomer-module.html#yTransitionDipoleNuclearOperator,Variable lib.systems.joel.simplifiedMonomer.yTransitionDipoleNuclearOperator=lib.systems.joel.simplifiedMonomer-module.html#yTransitionDipoleNuclearOperator"><a title="lib.systems.joel.coherentDimer.yTransitionDipoleNuclearOperator
+lib.systems.joel.incoherentDimer.yTransitionDipoleNuclearOperator
+lib.systems.joel.monomer.yTransitionDipoleNuclearOperator
+lib.systems.joel.simplifiedMonomer.yTransitionDipoleNuclearOperator" class="py-name" href="#" onclick="return doclink('link-129', 'yTransitionDipoleNuclearOperator', 'link-129');">yTransitionDipoleNuclearOperator</a></tt> <tt class="py-op">=</tt> <tt id="link-130" class="py-name"><a title="lib.NuclearOperator" class="py-name" href="#" onclick="return doclink('link-130', 'NuclearOperator', 'link-6');">NuclearOperator</a></tt><tt class="py-op">.</tt><tt id="link-131" class="py-name"><a title="lib.NuclearOperator.constantPositionNuclearOperator" class="py-name" href="#" onclick="return doclink('link-131', 'constantPositionNuclearOperator', 'link-126');">constantPositionNuclearOperator</a></tt><tt class="py-op">(</tt><tt id="link-132" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-132', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt id="link-133" class="py-name"><a title="lib.systems.joel.coherentDimer.yTransitionDipoleValue
+lib.systems.joel.incoherentDimer.yTransitionDipoleValue
+lib.systems.joel.monomer.yTransitionDipoleValue
+lib.systems.joel.simplifiedMonomer.yTransitionDipoleValue" class="py-name" href="#" onclick="return doclink('link-133', 'yTransitionDipoleValue', 'link-123');">yTransitionDipoleValue</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt id="link-134" class="py-name" targets="Variable lib.systems.MgC.MgC.xTransitionDipole=lib.systems.MgC.MgC-module.html#xTransitionDipole,Variable lib.systems.joel.coherentDimer.xTransitionDipole=lib.systems.joel.coherentDimer-module.html#xTransitionDipole,Variable lib.systems.joel.incoherentDimer.xTransitionDipole=lib.systems.joel.incoherentDimer-module.html#xTransitionDipole,Variable lib.systems.joel.monomer.xTransitionDipole=lib.systems.joel.monomer-module.html#xTransitionDipole,Variable lib.systems.joel.simplifiedMonomer.xTransitionDipole=lib.systems.joel.simplifiedMonomer-module.html#xTransitionDipole"><a title="lib.systems.MgC.MgC.xTransitionDipole
+lib.systems.joel.coherentDimer.xTransitionDipole
+lib.systems.joel.incoherentDimer.xTransitionDipole
+lib.systems.joel.monomer.xTransitionDipole
+lib.systems.joel.simplifiedMonomer.xTransitionDipole" class="py-name" href="#" onclick="return doclink('link-134', 'xTransitionDipole', 'link-134');">xTransitionDipole</a></tt> <tt class="py-op">=</tt> <tt id="link-135" class="py-name"><a title="lib.ElectronicOperator
+lib.ElectronicOperator.ElectronicOperator" class="py-name" href="#" onclick="return doclink('link-135', 'ElectronicOperator', 'link-2');">ElectronicOperator</a></tt><tt class="py-op">.</tt><tt id="link-136" class="py-name" targets="Class lib.ElectronicOperator.ElectronicPositionOperator=lib.ElectronicOperator.ElectronicPositionOperator-class.html"><a title="lib.ElectronicOperator.ElectronicPositionOperator" class="py-name" href="#" onclick="return doclink('link-136', 'ElectronicPositionOperator', 'link-136');">ElectronicPositionOperator</a></tt><tt class="py-op">(</tt><tt id="link-137" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-137', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt> <tt id="link-138" class="py-name"><a title="lib.systems.joel.coherentDimer.xTransitionDipoleNuclearOperator
+lib.systems.joel.incoherentDimer.xTransitionDipoleNuclearOperator
+lib.systems.joel.monomer.xTransitionDipoleNuclearOperator
+lib.systems.joel.simplifiedMonomer.xTransitionDipoleNuclearOperator" class="py-name" href="#" onclick="return doclink('link-138', 'xTransitionDipoleNuclearOperator', 'link-124');">xTransitionDipoleNuclearOperator</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt id="link-139" class="py-name"><a title="lib.systems.joel.coherentDimer.xTransitionDipoleNuclearOperator
+lib.systems.joel.incoherentDimer.xTransitionDipoleNuclearOperator
+lib.systems.joel.monomer.xTransitionDipoleNuclearOperator
+lib.systems.joel.simplifiedMonomer.xTransitionDipoleNuclearOperator" class="py-name" href="#" onclick="return doclink('link-139', 'xTransitionDipoleNuclearOperator', 'link-124');">xTransitionDipoleNuclearOperator</a></tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt id="link-140" class="py-name" targets="Variable lib.systems.MgC.MgC.yTransitionDipole=lib.systems.MgC.MgC-module.html#yTransitionDipole,Variable lib.systems.joel.coherentDimer.yTransitionDipole=lib.systems.joel.coherentDimer-module.html#yTransitionDipole,Variable lib.systems.joel.incoherentDimer.yTransitionDipole=lib.systems.joel.incoherentDimer-module.html#yTransitionDipole,Variable lib.systems.joel.monomer.yTransitionDipole=lib.systems.joel.monomer-module.html#yTransitionDipole,Variable lib.systems.joel.simplifiedMonomer.yTransitionDipole=lib.systems.joel.simplifiedMonomer-module.html#yTransitionDipole"><a title="lib.systems.MgC.MgC.yTransitionDipole
+lib.systems.joel.coherentDimer.yTransitionDipole
+lib.systems.joel.incoherentDimer.yTransitionDipole
+lib.systems.joel.monomer.yTransitionDipole
+lib.systems.joel.simplifiedMonomer.yTransitionDipole" class="py-name" href="#" onclick="return doclink('link-140', 'yTransitionDipole', 'link-140');">yTransitionDipole</a></tt> <tt class="py-op">=</tt> <tt id="link-141" class="py-name"><a title="lib.ElectronicOperator
+lib.ElectronicOperator.ElectronicOperator" class="py-name" href="#" onclick="return doclink('link-141', 'ElectronicOperator', 'link-2');">ElectronicOperator</a></tt><tt class="py-op">.</tt><tt id="link-142" class="py-name"><a title="lib.ElectronicOperator.ElectronicPositionOperator" class="py-name" href="#" onclick="return doclink('link-142', 'ElectronicPositionOperator', 'link-136');">ElectronicPositionOperator</a></tt><tt class="py-op">(</tt><tt id="link-143" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-143', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">,</tt> <tt id="link-144" class="py-name"><a title="lib.systems.joel.coherentDimer.yTransitionDipoleNuclearOperator
+lib.systems.joel.incoherentDimer.yTransitionDipoleNuclearOperator
+lib.systems.joel.monomer.yTransitionDipoleNuclearOperator
+lib.systems.joel.simplifiedMonomer.yTransitionDipoleNuclearOperator" class="py-name" href="#" onclick="return doclink('link-144', 'yTransitionDipoleNuclearOperator', 'link-129');">yTransitionDipoleNuclearOperator</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt id="link-145" class="py-name"><a title="lib.systems.joel.coherentDimer.yTransitionDipoleNuclearOperator
+lib.systems.joel.incoherentDimer.yTransitionDipoleNuclearOperator
+lib.systems.joel.monomer.yTransitionDipoleNuclearOperator
+lib.systems.joel.simplifiedMonomer.yTransitionDipoleNuclearOperator" class="py-name" href="#" onclick="return doclink('link-145', 'yTransitionDipoleNuclearOperator', 'link-129');">yTransitionDipoleNuclearOperator</a></tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt id="link-146" class="py-name" targets="Variable lib.systems.MgC.MgC.zTransitionDipole=lib.systems.MgC.MgC-module.html#zTransitionDipole,Variable lib.systems.joel.coherentDimer.zTransitionDipole=lib.systems.joel.coherentDimer-module.html#zTransitionDipole,Variable lib.systems.joel.incoherentDimer.zTransitionDipole=lib.systems.joel.incoherentDimer-module.html#zTransitionDipole,Variable lib.systems.joel.monomer.zTransitionDipole=lib.systems.joel.monomer-module.html#zTransitionDipole,Variable lib.systems.joel.simplifiedMonomer.zTransitionDipole=lib.systems.joel.simplifiedMonomer-module.html#zTransitionDipole"><a title="lib.systems.MgC.MgC.zTransitionDipole
+lib.systems.joel.coherentDimer.zTransitionDipole
+lib.systems.joel.incoherentDimer.zTransitionDipole
+lib.systems.joel.monomer.zTransitionDipole
+lib.systems.joel.simplifiedMonomer.zTransitionDipole" class="py-name" href="#" onclick="return doclink('link-146', 'zTransitionDipole', 'link-146');">zTransitionDipole</a></tt> <tt class="py-op">=</tt> <tt id="link-147" class="py-name"><a title="lib.ElectronicOperator
+lib.ElectronicOperator.ElectronicOperator" class="py-name" href="#" onclick="return doclink('link-147', 'ElectronicOperator', 'link-2');">ElectronicOperator</a></tt><tt class="py-op">.</tt><tt id="link-148" class="py-name"><a title="lib.ElectronicOperator.ElectronicPositionOperator" class="py-name" href="#" onclick="return doclink('link-148', 'ElectronicPositionOperator', 'link-136');">ElectronicPositionOperator</a></tt><tt class="py-op">(</tt><tt id="link-149" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-149', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt id="link-150" class="py-name" targets="Variable lib.systems.joel.coherentDimer.xPump=lib.systems.joel.coherentDimer-module.html#xPump,Variable lib.systems.joel.incoherentDimer.xPump=lib.systems.joel.incoherentDimer-module.html#xPump,Variable lib.systems.joel.monomer.xPump=lib.systems.joel.monomer-module.html#xPump,Variable lib.systems.joel.simplifiedMonomer.xPump=lib.systems.joel.simplifiedMonomer-module.html#xPump"><a title="lib.systems.joel.coherentDimer.xPump
+lib.systems.joel.incoherentDimer.xPump
+lib.systems.joel.monomer.xPump
+lib.systems.joel.simplifiedMonomer.xPump" class="py-name" href="#" onclick="return doclink('link-150', 'xPump', 'link-150');">xPump</a></tt> <tt class="py-op">=</tt> <tt id="link-151" class="py-name"><a title="lib.TimeFunction" class="py-name" href="#" onclick="return doclink('link-151', 'TimeFunction', 'link-10');">TimeFunction</a></tt><tt class="py-op">.</tt><tt id="link-152" class="py-name" targets="Class lib.TimeFunction.GaussianCosinePulse=lib.TimeFunction.GaussianCosinePulse-class.html"><a title="lib.TimeFunction.GaussianCosinePulse" class="py-name" href="#" onclick="return doclink('link-152', 'GaussianCosinePulse', 'link-152');">GaussianCosinePulse</a></tt><tt class="py-op">(</tt><tt id="link-153" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-153', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">                                         <tt class="py-name">centerOmega</tt> <tt class="py-op">=</tt> <tt id="link-154" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_c
+lib.systems.joel.incoherentDimer.omega_c
+lib.systems.joel.monomer.omega_c
+lib.systems.joel.simplifiedMonomer.omega_c" class="py-name" href="#" onclick="return doclink('link-154', 'omega_c', 'link-21');">omega_c</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">                                         <tt class="py-name">timeSpread</tt> <tt class="py-op">=</tt> <tt id="link-155" class="py-name"><a title="lib.systems.joel.coherentDimer.pulse_width_stdev
+lib.systems.joel.incoherentDimer.pulse_width_stdev
+lib.systems.joel.monomer.pulse_width_stdev
+lib.systems.joel.simplifiedMonomer.pulse_width_stdev" class="py-name" href="#" onclick="return doclink('link-155', 'pulse_width_stdev', 'link-54');">pulse_width_stdev</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt id="link-156" class="py-name" targets="Variable lib.systems.joel.coherentDimer.yPump=lib.systems.joel.coherentDimer-module.html#yPump,Variable lib.systems.joel.incoherentDimer.yPump=lib.systems.joel.incoherentDimer-module.html#yPump,Variable lib.systems.joel.monomer.yPump=lib.systems.joel.monomer-module.html#yPump,Variable lib.systems.joel.simplifiedMonomer.yPump=lib.systems.joel.simplifiedMonomer-module.html#yPump"><a title="lib.systems.joel.coherentDimer.yPump
+lib.systems.joel.incoherentDimer.yPump
+lib.systems.joel.monomer.yPump
+lib.systems.joel.simplifiedMonomer.yPump" class="py-name" href="#" onclick="return doclink('link-156', 'yPump', 'link-156');">yPump</a></tt> <tt class="py-op">=</tt> <tt id="link-157" class="py-name"><a title="lib.TimeFunction" class="py-name" href="#" onclick="return doclink('link-157', 'TimeFunction', 'link-10');">TimeFunction</a></tt><tt class="py-op">.</tt><tt id="link-158" class="py-name"><a title="lib.TimeFunction.GaussianCosinePulse" class="py-name" href="#" onclick="return doclink('link-158', 'GaussianCosinePulse', 'link-152');">GaussianCosinePulse</a></tt><tt class="py-op">(</tt><tt id="link-159" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-159', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">                                         <tt class="py-name">centerOmega</tt> <tt class="py-op">=</tt> <tt id="link-160" class="py-name"><a title="lib.systems.joel.coherentDimer.omega_c
+lib.systems.joel.incoherentDimer.omega_c
+lib.systems.joel.monomer.omega_c
+lib.systems.joel.simplifiedMonomer.omega_c" class="py-name" href="#" onclick="return doclink('link-160', 'omega_c', 'link-21');">omega_c</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">                                         <tt class="py-name">timeSpread</tt> <tt class="py-op">=</tt> <tt id="link-161" class="py-name"><a title="lib.systems.joel.coherentDimer.pulse_width_stdev
+lib.systems.joel.incoherentDimer.pulse_width_stdev
+lib.systems.joel.monomer.pulse_width_stdev
+lib.systems.joel.simplifiedMonomer.pulse_width_stdev" class="py-name" href="#" onclick="return doclink('link-161', 'pulse_width_stdev', 'link-54');">pulse_width_stdev</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">                                          </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt id="link-162" class="py-name" targets="Variable lib.systems.joel.coherentDimer.zPump=lib.systems.joel.coherentDimer-module.html#zPump,Variable lib.systems.joel.incoherentDimer.zPump=lib.systems.joel.incoherentDimer-module.html#zPump,Variable lib.systems.joel.monomer.zPump=lib.systems.joel.monomer-module.html#zPump,Variable lib.systems.joel.simplifiedMonomer.zPump=lib.systems.joel.simplifiedMonomer-module.html#zPump"><a title="lib.systems.joel.coherentDimer.zPump
+lib.systems.joel.incoherentDimer.zPump
+lib.systems.joel.monomer.zPump
+lib.systems.joel.simplifiedMonomer.zPump" class="py-name" href="#" onclick="return doclink('link-162', 'zPump', 'link-162');">zPump</a></tt> <tt class="py-op">=</tt> <tt id="link-163" class="py-name"><a title="lib.TimeFunction" class="py-name" href="#" onclick="return doclink('link-163', 'TimeFunction', 'link-10');">TimeFunction</a></tt><tt class="py-op">.</tt><tt id="link-164" class="py-name" targets="Class lib.TimeFunction.zeroTimeFunction=lib.TimeFunction.zeroTimeFunction-class.html"><a title="lib.TimeFunction.zeroTimeFunction" class="py-name" href="#" onclick="return doclink('link-164', 'zeroTimeFunction', 'link-164');">zeroTimeFunction</a></tt><tt class="py-op">(</tt><tt id="link-165" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-165', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">     </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">     </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt id="link-166" class="py-name" targets="Variable lib.systems.joel.coherentDimer.pumpBeamTuple=lib.systems.joel.coherentDimer-module.html#pumpBeamTuple,Variable lib.systems.joel.incoherentDimer.pumpBeamTuple=lib.systems.joel.incoherentDimer-module.html#pumpBeamTuple,Variable lib.systems.joel.monomer.pumpBeamTuple=lib.systems.joel.monomer-module.html#pumpBeamTuple,Variable lib.systems.joel.simplifiedMonomer.pumpBeamTuple=lib.systems.joel.simplifiedMonomer-module.html#pumpBeamTuple"><a title="lib.systems.joel.coherentDimer.pumpBeamTuple
+lib.systems.joel.incoherentDimer.pumpBeamTuple
+lib.systems.joel.monomer.pumpBeamTuple
+lib.systems.joel.simplifiedMonomer.pumpBeamTuple" class="py-name" href="#" onclick="return doclink('link-166', 'pumpBeamTuple', 'link-166');">pumpBeamTuple</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt id="link-167" class="py-name"><a title="lib.systems.joel.coherentDimer.xPump
+lib.systems.joel.incoherentDimer.xPump
+lib.systems.joel.monomer.xPump
+lib.systems.joel.simplifiedMonomer.xPump" class="py-name" href="#" onclick="return doclink('link-167', 'xPump', 'link-150');">xPump</a></tt><tt class="py-op">,</tt> <tt id="link-168" class="py-name"><a title="lib.systems.joel.coherentDimer.yPump
+lib.systems.joel.incoherentDimer.yPump
+lib.systems.joel.monomer.yPump
+lib.systems.joel.simplifiedMonomer.yPump" class="py-name" href="#" onclick="return doclink('link-168', 'yPump', 'link-156');">yPump</a></tt><tt class="py-op">,</tt> <tt id="link-169" class="py-name"><a title="lib.systems.joel.coherentDimer.zPump
+lib.systems.joel.incoherentDimer.zPump
+lib.systems.joel.monomer.zPump
+lib.systems.joel.simplifiedMonomer.zPump" class="py-name" href="#" onclick="return doclink('link-169', 'zPump', 'link-162');">zPump</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt id="link-170" class="py-name" targets="Variable lib.systems.MgC.MgC.transitionDipoleTuple=lib.systems.MgC.MgC-module.html#transitionDipoleTuple,Variable lib.systems.joel.coherentDimer.transitionDipoleTuple=lib.systems.joel.coherentDimer-module.html#transitionDipoleTuple,Variable lib.systems.joel.incoherentDimer.transitionDipoleTuple=lib.systems.joel.incoherentDimer-module.html#transitionDipoleTuple,Variable lib.systems.joel.monomer.transitionDipoleTuple=lib.systems.joel.monomer-module.html#transitionDipoleTuple,Variable lib.systems.joel.simplifiedMonomer.transitionDipoleTuple=lib.systems.joel.simplifiedMonomer-module.html#transitionDipoleTuple"><a title="lib.systems.MgC.MgC.transitionDipoleTuple
+lib.systems.joel.coherentDimer.transitionDipoleTuple
+lib.systems.joel.incoherentDimer.transitionDipoleTuple
+lib.systems.joel.monomer.transitionDipoleTuple
+lib.systems.joel.simplifiedMonomer.transitionDipoleTuple" class="py-name" href="#" onclick="return doclink('link-170', 'transitionDipoleTuple', 'link-170');">transitionDipoleTuple</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt id="link-171" class="py-name"><a title="lib.systems.MgC.MgC.xTransitionDipole
+lib.systems.joel.coherentDimer.xTransitionDipole
+lib.systems.joel.incoherentDimer.xTransitionDipole
+lib.systems.joel.monomer.xTransitionDipole
+lib.systems.joel.simplifiedMonomer.xTransitionDipole" class="py-name" href="#" onclick="return doclink('link-171', 'xTransitionDipole', 'link-134');">xTransitionDipole</a></tt><tt class="py-op">,</tt> <tt id="link-172" class="py-name"><a title="lib.systems.MgC.MgC.yTransitionDipole
+lib.systems.joel.coherentDimer.yTransitionDipole
+lib.systems.joel.incoherentDimer.yTransitionDipole
+lib.systems.joel.monomer.yTransitionDipole
+lib.systems.joel.simplifiedMonomer.yTransitionDipole" class="py-name" href="#" onclick="return doclink('link-172', 'yTransitionDipole', 'link-140');">yTransitionDipole</a></tt><tt class="py-op">,</tt> <tt id="link-173" class="py-name"><a title="lib.systems.MgC.MgC.zTransitionDipole
+lib.systems.joel.coherentDimer.zTransitionDipole
+lib.systems.joel.incoherentDimer.zTransitionDipole
+lib.systems.joel.monomer.zTransitionDipole
+lib.systems.joel.simplifiedMonomer.zTransitionDipole" class="py-name" href="#" onclick="return doclink('link-173', 'zTransitionDipole', 'link-146');">zTransitionDipole</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt id="link-174" class="py-name" targets="Variable lib.systems.joel.coherentDimer.maxFrequency=lib.systems.joel.coherentDimer-module.html#maxFrequency,Variable lib.systems.joel.incoherentDimer.maxFrequency=lib.systems.joel.incoherentDimer-module.html#maxFrequency,Variable lib.systems.joel.monomer.maxFrequency=lib.systems.joel.monomer-module.html#maxFrequency,Variable lib.systems.joel.simplifiedMonomer.maxFrequency=lib.systems.joel.simplifiedMonomer-module.html#maxFrequency"><a title="lib.systems.joel.coherentDimer.maxFrequency
+lib.systems.joel.incoherentDimer.maxFrequency
+lib.systems.joel.monomer.maxFrequency
+lib.systems.joel.simplifiedMonomer.maxFrequency" class="py-name" href="#" onclick="return doclink('link-174', 'maxFrequency', 'link-174');">maxFrequency</a></tt> <tt class="py-op">=</tt>  <tt id="link-175" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-175', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-176" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-176', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-177" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-177', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">3000.0</tt><tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt id="link-178" class="py-name" targets="Variable lib.systems.joel.coherentDimer.frequencyResolution=lib.systems.joel.coherentDimer-module.html#frequencyResolution,Variable lib.systems.joel.incoherentDimer.frequencyResolution=lib.systems.joel.incoherentDimer-module.html#frequencyResolution,Variable lib.systems.joel.monomer.frequencyResolution=lib.systems.joel.monomer-module.html#frequencyResolution,Variable lib.systems.joel.simplifiedMonomer.frequencyResolution=lib.systems.joel.simplifiedMonomer-module.html#frequencyResolution"><a title="lib.systems.joel.coherentDimer.frequencyResolution
+lib.systems.joel.incoherentDimer.frequencyResolution
+lib.systems.joel.monomer.frequencyResolution
+lib.systems.joel.simplifiedMonomer.frequencyResolution" class="py-name" href="#" onclick="return doclink('link-178', 'frequencyResolution', 'link-178');">frequencyResolution</a></tt> <tt class="py-op">=</tt>  <tt id="link-179" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-179', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-180" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-180', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-181" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-181', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">2.0E-1</tt><tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt id="link-182" class="py-name" targets="Variable lib.systems.joel.coherentDimer.pulseSpectrumFrequencies=lib.systems.joel.coherentDimer-module.html#pulseSpectrumFrequencies,Variable lib.systems.joel.incoherentDimer.pulseSpectrumFrequencies=lib.systems.joel.incoherentDimer-module.html#pulseSpectrumFrequencies,Variable lib.systems.joel.monomer.pulseSpectrumFrequencies=lib.systems.joel.monomer-module.html#pulseSpectrumFrequencies,Variable lib.systems.joel.simplifiedMonomer.pulseSpectrumFrequencies=lib.systems.joel.simplifiedMonomer-module.html#pulseSpectrumFrequencies"><a title="lib.systems.joel.coherentDimer.pulseSpectrumFrequencies
+lib.systems.joel.incoherentDimer.pulseSpectrumFrequencies
+lib.systems.joel.monomer.pulseSpectrumFrequencies
+lib.systems.joel.simplifiedMonomer.pulseSpectrumFrequencies" class="py-name" href="#" onclick="return doclink('link-182', 'pulseSpectrumFrequencies', 'link-182');">pulseSpectrumFrequencies</a></tt><tt class="py-op">,</tt> <tt class="py-name">pulseSpectrumValues</tt> <tt class="py-op">=</tt> <tt id="link-183" class="py-name"><a title="lib.systems.joel.coherentDimer.xPump
+lib.systems.joel.incoherentDimer.xPump
+lib.systems.joel.monomer.xPump
+lib.systems.joel.simplifiedMonomer.xPump" class="py-name" href="#" onclick="return doclink('link-183', 'xPump', 'link-150');">xPump</a></tt><tt class="py-op">.</tt><tt id="link-184" class="py-name" targets="Method lib.NuclearWavefunction.ZeroNuclearWavefunction.fourierTransform()=lib.NuclearWavefunction.ZeroNuclearWavefunction-class.html#fourierTransform,Method lib.NuclearWavefunction.nuclearWavefunction.fourierTransform()=lib.NuclearWavefunction.nuclearWavefunction-class.html#fourierTransform,Method lib.TimeFunction.timeFunction.fourierTransform()=lib.TimeFunction.timeFunction-class.html#fourierTransform,Method lib.TimeFunction.zeroTimeFunction.fourierTransform()=lib.TimeFunction.zeroTimeFunction-class.html#fourierTransform"><a title="lib.NuclearWavefunction.ZeroNuclearWavefunction.fourierTransform
+lib.NuclearWavefunction.nuclearWavefunction.fourierTransform
+lib.TimeFunction.timeFunction.fourierTransform
+lib.TimeFunction.zeroTimeFunction.fourierTransform" class="py-name" href="#" onclick="return doclink('link-184', 'fourierTransform', 'link-184');">fourierTransform</a></tt><tt class="py-op">(</tt><tt id="link-185" class="py-name"><a title="lib.systems.joel.coherentDimer.maxFrequency
+lib.systems.joel.incoherentDimer.maxFrequency
+lib.systems.joel.monomer.maxFrequency
+lib.systems.joel.simplifiedMonomer.maxFrequency" class="py-name" href="#" onclick="return doclink('link-185', 'maxFrequency', 'link-174');">maxFrequency</a></tt><tt class="py-op">,</tt> <tt id="link-186" class="py-name"><a title="lib.systems.joel.coherentDimer.frequencyResolution
+lib.systems.joel.incoherentDimer.frequencyResolution
+lib.systems.joel.monomer.frequencyResolution
+lib.systems.joel.simplifiedMonomer.frequencyResolution" class="py-name" href="#" onclick="return doclink('link-186', 'frequencyResolution', 'link-178');">frequencyResolution</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt id="link-187" class="py-name"><a title="lib.systems.joel.coherentDimer.pulseSpectrumFrequencies
+lib.systems.joel.incoherentDimer.pulseSpectrumFrequencies
+lib.systems.joel.monomer.pulseSpectrumFrequencies
+lib.systems.joel.simplifiedMonomer.pulseSpectrumFrequencies" class="py-name" href="#" onclick="return doclink('link-187', 'pulseSpectrumFrequencies', 'link-182');">pulseSpectrumFrequencies</a></tt> <tt class="py-op">=</tt> <tt id="link-188" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-188', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-189" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-189', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-190" class="py-name" targets="Method lib.Spacetime.unitHandler.wavenumbersFromEnergyUnits()=lib.Spacetime.unitHandler-class.html#wavenumbersFromEnergyUnits"><a title="lib.Spacetime.unitHandler.wavenumbersFromEnergyUnits" class="py-name" href="#" onclick="return doclink('link-190', 'wavenumbersFromEnergyUnits', 'link-190');">wavenumbersFromEnergyUnits</a></tt><tt class="py-op">(</tt><tt id="link-191" class="py-name"><a title="lib.systems.joel.coherentDimer.pulseSpectrumFrequencies
+lib.systems.joel.incoherentDimer.pulseSpectrumFrequencies
+lib.systems.joel.monomer.pulseSpectrumFrequencies
+lib.systems.joel.simplifiedMonomer.pulseSpectrumFrequencies" class="py-name" href="#" onclick="return doclink('link-191', 'pulseSpectrumFrequencies', 'link-182');">pulseSpectrumFrequencies</a></tt><tt class="py-op">)</tt>     </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt id="link-192" class="py-name" targets="Variable lib.systems.joel.coherentDimer.noiseSTDEV=lib.systems.joel.coherentDimer-module.html#noiseSTDEV,Variable lib.systems.joel.incoherentDimer.noiseSTDEV=lib.systems.joel.incoherentDimer-module.html#noiseSTDEV,Variable lib.systems.joel.monomer.noiseSTDEV=lib.systems.joel.monomer-module.html#noiseSTDEV,Variable lib.systems.joel.simplifiedMonomer.noiseSTDEV=lib.systems.joel.simplifiedMonomer-module.html#noiseSTDEV"><a title="lib.systems.joel.coherentDimer.noiseSTDEV
+lib.systems.joel.incoherentDimer.noiseSTDEV
+lib.systems.joel.monomer.noiseSTDEV
+lib.systems.joel.simplifiedMonomer.noiseSTDEV" class="py-name" href="#" onclick="return doclink('link-192', 'noiseSTDEV', 'link-192');">noiseSTDEV</a></tt> <tt class="py-op">=</tt>  <tt id="link-193" class="py-name"><a title="lib.systems.Allan.coherentDimer.mySpace
+lib.systems.Allan.monomer.mySpace
+lib.systems.Jacob.witnessBreaker.mySpace
+lib.systems.Juergen.one_fast_mode_monomer.mySpace
+lib.systems.Juergen.one_fast_mode_monomer_HIGH_RES.mySpace
+lib.systems.Juergen.one_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_dimer_detuned.mySpace
+lib.systems.Juergen.two_mode_monomer.mySpace
+lib.systems.Juergen.two_mode_monomer_detuned.mySpace
+lib.systems.MgC.MgC.mySpace
+lib.systems.iodine.dimerHighlyCoupled.mySpace
+lib.systems.iodine.monomer.mySpace
+lib.systems.iodine.monomer_Accurate.mySpace
+lib.systems.iodine.monomer_ho.mySpace
+lib.systems.iodine.monomer_s0_div_100.mySpace
+lib.systems.joel.coherentDimer.mySpace
+lib.systems.joel.incoherentDimer.mySpace
+lib.systems.joel.monomer.mySpace
+lib.systems.joel.simplifiedMonomer.mySpace
+lib.systems.naturalNonCondon.coherentDimer.mySpace
+lib.systems.naturalNonCondon.monomer.mySpace
+lib.systems.naturalNonCondon.monomerDoubleMass.mySpace
+lib.systems.naturalNonCondon.monomer_S_0.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_005.mySpace
+lib.systems.naturalNonCondon.monomer_S_0_2.mySpace
+lib.systems.naturalNonCondon.monomer_S_1.mySpace
+lib.systems.naturalNonCondon.monomer_S_10.mySpace" class="py-name" href="#" onclick="return doclink('link-193', 'mySpace', 'link-14');">mySpace</a></tt><tt class="py-op">.</tt><tt id="link-194" class="py-name"><a title="lib.Spacetime.unitHandler" class="py-name" href="#" onclick="return doclink('link-194', 'unitHandler', 'link-19');">unitHandler</a></tt><tt class="py-op">.</tt><tt id="link-195" class="py-name"><a title="lib.Spacetime.unitHandler.energyUnitsFromWavenumbers" class="py-name" href="#" onclick="return doclink('link-195', 'energyUnitsFromWavenumbers', 'link-20');">energyUnitsFromWavenumbers</a></tt><tt class="py-op">(</tt><tt class="py-number">40.0</tt><tt class="py-op">)</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt id="link-196" class="py-name" targets="Variable lib.systems.joel.coherentDimer.noiseVariance=lib.systems.joel.coherentDimer-module.html#noiseVariance,Variable lib.systems.joel.incoherentDimer.noiseVariance=lib.systems.joel.incoherentDimer-module.html#noiseVariance,Variable lib.systems.joel.monomer.noiseVariance=lib.systems.joel.monomer-module.html#noiseVariance,Variable lib.systems.joel.simplifiedMonomer.noiseVariance=lib.systems.joel.simplifiedMonomer-module.html#noiseVariance"><a title="lib.systems.joel.coherentDimer.noiseVariance
+lib.systems.joel.incoherentDimer.noiseVariance
+lib.systems.joel.monomer.noiseVariance
+lib.systems.joel.simplifiedMonomer.noiseVariance" class="py-name" href="#" onclick="return doclink('link-196', 'noiseVariance', 'link-196');">noiseVariance</a></tt> <tt class="py-op">=</tt> <tt id="link-197" class="py-name"><a title="lib.systems.joel.coherentDimer.noiseSTDEV
+lib.systems.joel.incoherentDimer.noiseSTDEV
+lib.systems.joel.monomer.noiseSTDEV
+lib.systems.joel.simplifiedMonomer.noiseSTDEV" class="py-name" href="#" onclick="return doclink('link-197', 'noiseSTDEV', 'link-192');">noiseSTDEV</a></tt><tt class="py-op">**</tt><tt class="py-number">2</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt id="link-198" class="py-name" targets="Variable lib.systems.joel.coherentDimer.noiseCorrelation=lib.systems.joel.coherentDimer-module.html#noiseCorrelation,Variable lib.systems.joel.incoherentDimer.noiseCorrelation=lib.systems.joel.incoherentDimer-module.html#noiseCorrelation,Variable lib.systems.joel.monomer.noiseCorrelation=lib.systems.joel.monomer-module.html#noiseCorrelation,Variable lib.systems.joel.simplifiedMonomer.noiseCorrelation=lib.systems.joel.simplifiedMonomer-module.html#noiseCorrelation"><a title="lib.systems.joel.coherentDimer.noiseCorrelation
+lib.systems.joel.incoherentDimer.noiseCorrelation
+lib.systems.joel.monomer.noiseCorrelation
+lib.systems.joel.simplifiedMonomer.noiseCorrelation" class="py-name" href="#" onclick="return doclink('link-198', 'noiseCorrelation', 'link-198');">noiseCorrelation</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0.8</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt id="link-199" class="py-name" targets="Variable lib.systems.joel.coherentDimer.noiseCovariance=lib.systems.joel.coherentDimer-module.html#noiseCovariance,Variable lib.systems.joel.incoherentDimer.noiseCovariance=lib.systems.joel.incoherentDimer-module.html#noiseCovariance,Variable lib.systems.joel.monomer.noiseCovariance=lib.systems.joel.monomer-module.html#noiseCovariance,Variable lib.systems.joel.simplifiedMonomer.noiseCovariance=lib.systems.joel.simplifiedMonomer-module.html#noiseCovariance"><a title="lib.systems.joel.coherentDimer.noiseCovariance
+lib.systems.joel.incoherentDimer.noiseCovariance
+lib.systems.joel.monomer.noiseCovariance
+lib.systems.joel.simplifiedMonomer.noiseCovariance" class="py-name" href="#" onclick="return doclink('link-199', 'noiseCovariance', 'link-199');">noiseCovariance</a></tt> <tt class="py-op">=</tt> <tt id="link-200" class="py-name"><a title="lib.systems.joel.coherentDimer.noiseCorrelation
+lib.systems.joel.incoherentDimer.noiseCorrelation
+lib.systems.joel.monomer.noiseCorrelation
+lib.systems.joel.simplifiedMonomer.noiseCorrelation" class="py-name" href="#" onclick="return doclink('link-200', 'noiseCorrelation', 'link-198');">noiseCorrelation</a></tt> <tt class="py-op">*</tt> <tt id="link-201" class="py-name"><a title="lib.systems.joel.coherentDimer.noiseSTDEV
+lib.systems.joel.incoherentDimer.noiseSTDEV
+lib.systems.joel.monomer.noiseSTDEV
+lib.systems.joel.simplifiedMonomer.noiseSTDEV" class="py-name" href="#" onclick="return doclink('link-201', 'noiseSTDEV', 'link-192');">noiseSTDEV</a></tt><tt class="py-op">**</tt><tt class="py-number">2</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt id="link-202" class="py-name" targets="Variable lib.systems.joel.coherentDimer.noiseMean=lib.systems.joel.coherentDimer-module.html#noiseMean,Variable lib.systems.joel.incoherentDimer.noiseMean=lib.systems.joel.incoherentDimer-module.html#noiseMean,Variable lib.systems.joel.monomer.noiseMean=lib.systems.joel.monomer-module.html#noiseMean,Variable lib.systems.joel.simplifiedMonomer.noiseMean=lib.systems.joel.simplifiedMonomer-module.html#noiseMean"><a title="lib.systems.joel.coherentDimer.noiseMean
+lib.systems.joel.incoherentDimer.noiseMean
+lib.systems.joel.monomer.noiseMean
+lib.systems.joel.simplifiedMonomer.noiseMean" class="py-name" href="#" onclick="return doclink('link-202', 'noiseMean', 'link-202');">noiseMean</a></tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">array</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">[</tt><tt class="py-number">0.0</tt><tt class="py-op">]</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt id="link-203" class="py-name" targets="Variable lib.systems.joel.coherentDimer.noiseCovarianceMatrix=lib.systems.joel.coherentDimer-module.html#noiseCovarianceMatrix,Variable lib.systems.joel.incoherentDimer.noiseCovarianceMatrix=lib.systems.joel.incoherentDimer-module.html#noiseCovarianceMatrix,Variable lib.systems.joel.monomer.noiseCovarianceMatrix=lib.systems.joel.monomer-module.html#noiseCovarianceMatrix,Variable lib.systems.joel.simplifiedMonomer.noiseCovarianceMatrix=lib.systems.joel.simplifiedMonomer-module.html#noiseCovarianceMatrix"><a title="lib.systems.joel.coherentDimer.noiseCovarianceMatrix
+lib.systems.joel.incoherentDimer.noiseCovarianceMatrix
+lib.systems.joel.monomer.noiseCovarianceMatrix
+lib.systems.joel.simplifiedMonomer.noiseCovarianceMatrix" class="py-name" href="#" onclick="return doclink('link-203', 'noiseCovarianceMatrix', 'link-203');">noiseCovarianceMatrix</a></tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">array</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">[</tt><tt id="link-204" class="py-name"><a title="lib.systems.joel.coherentDimer.noiseVariance
+lib.systems.joel.incoherentDimer.noiseVariance
+lib.systems.joel.monomer.noiseVariance
+lib.systems.joel.simplifiedMonomer.noiseVariance" class="py-name" href="#" onclick="return doclink('link-204', 'noiseVariance', 'link-196');">noiseVariance</a></tt><tt class="py-op">]</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="lib-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Apr  3 15:32:58 2017
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

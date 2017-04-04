@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class Hierarchy</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="lib-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="class-tree.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<center><b>
+ [ <a href="module-tree.html">Module Hierarchy</a>
+ | <a href="class-tree.html">Class Hierarchy</a> ]
+</b></center><br />
+<h1 class="epydoc">Class Hierarchy</h1>
+<ul class="nomargin-top">
+    <li> <strong class="uidlink">object</strong>:
+      <em class="summary">The most base type</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.BaseException</strong>:
+      <em class="summary">Common base class for all exceptions</em>
+    <ul>
+    <li> <strong class="uidlink">exceptions.Exception</strong>:
+      <em class="summary">Common base class for all non-exit exceptions.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.GaussianPulseTooCloseToEdgeOfTimeException-class.html">lib.TimeFunction.GaussianPulseTooCloseToEdgeOfTimeException</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.Spacetime.MismatchedSpacetimeError-class.html">lib.Spacetime.MismatchedSpacetimeError</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.ElectronicWavefunction.electronicDimensionMismatch-class.html">lib.ElectronicWavefunction.electronicDimensionMismatch</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.nuclearHamiltonianDimensionMismatch-class.html">lib.NuclearOperator.nuclearHamiltonianDimensionMismatch</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearWavefunction.unplotableNuclearWavefunction-class.html">lib.NuclearWavefunction.unplotableNuclearWavefunction</a></strong>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.ElectronicOperator.ElectronicHamiltonian-class.html">lib.ElectronicOperator.ElectronicHamiltonian</a></strong>:
+      <em class="summary">A Hamiltonian electronic degrees of freedom</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.ElectronicOperator.ElectronicOperator-class.html">lib.ElectronicOperator.ElectronicOperator</a></strong>:
+      <em class="summary">Abstract Class to hold matrix of nuclearOperators in 
+        electronic-dimension space</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.ElectronicOperator.ElectronicMomentumOperator-class.html">lib.ElectronicOperator.ElectronicMomentumOperator</a></strong>:
+      <em class="summary">Class to hold matrix of nuclearMomentumOperators.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.ElectronicOperator.ElectronicPositionOperator-class.html">lib.ElectronicOperator.ElectronicPositionOperator</a></strong>:
+      <em class="summary">Class to hold matrix of nuclearPositionOperators</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.ElectronicOperator.ElectronicPropagator-class.html">lib.ElectronicOperator.ElectronicPropagator</a></strong>:
+      <em class="summary">a medium-accuracy [O(dt^3)] propagator for an electronic 
+        hamiltonian</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.Spacetime.Spacetime-class.html">lib.Spacetime.Spacetime</a></strong>:
+      <em class="summary">Class which stores the parameters of function and hilbert space, as
+        well as units.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimePerturbation.electricDipole-class.html">lib.TimePerturbation.electricDipole</a></strong>:
+      <em class="summary">In case you would want it, this calculates the exact wavefunction 
+        for all possible number of interactions with a dipole moment and 
+        electric field this is not terribly useful as you would never be 
+        able to measure this object See chapter on phase matching in my 
+        thesis</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimePerturbation.electricDipoleOneInteraction-class.html">lib.TimePerturbation.electricDipoleOneInteraction</a></strong>:
+      <em class="summary">Class which describes an electric Dipole Perturbation which 
+        interacts just once with the specified system</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.ElectronicWavefunction.electronicWavefunction-class.html">lib.ElectronicWavefunction.electronicWavefunction</a></strong>:
+      <em class="summary">A collection of nuclear wavefunctions to represent nuclear 
+        amplitudes on different electronic states</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.ElectronicWavefunction.zeroElectronicWavefunction-class.html">lib.ElectronicWavefunction.zeroElectronicWavefunction</a></strong>:
+      <em class="summary">A wavefunction which is smart enough to not waste time calculating</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.experimentBase.experiment-class.html">lib.experiments.experimentBase.experiment</a></strong>:
+      <em class="summary">object which defines I/O operations for an experiment</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.experiments.Absorption.DipoleAbsorption-class.html">lib.experiments.Absorption.DipoleAbsorption</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.TwoDimensionalSpectrum.OnePopulationTime-class.html">lib.experiments.TwoDimensionalSpectrum.OnePopulationTime</a></strong>:
+      <em class="summary">2D electronic Spectrum for just one population evolution time</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.TwoDimensionalSpectrum.PopulationTimeScan-class.html">lib.experiments.TwoDimensionalSpectrum.PopulationTimeScan</a></strong>:
+      <em class="summary">2D electronic Spectrum for multiple population evolution times</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.Absorption.ThermallyAveragedDipoleAbsorption-class.html">lib.experiments.Absorption.ThermallyAveragedDipoleAbsorption</a></strong>:
+      <em class="summary">Average over a bunch of thermal states and random disorder</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.TransientGrating.interactionHelper-class.html">lib.experiments.TransientGrating.interactionHelper</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.TwoDimensionalSpectrum.interactionHelper-class.html">lib.experiments.TwoDimensionalSpectrum.interactionHelper</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.nuclearHamiltonian-class.html">lib.NuclearOperator.nuclearHamiltonian</a></strong>:
+      <em class="summary">Object to define the kinetic and potential energies of a nuclear 
+        environment</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.nuclearOperator-class.html">lib.NuclearOperator.nuclearOperator</a></strong>:
+      <em class="summary">abstract superclass which defines an operator in both x and k space
+        to act on a function which naturally exists in x-space</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.momentumOperator-class.html">lib.NuclearOperator.momentumOperator</a></strong>:
+      <em class="summary">A Class which will Fourier Transform the target wavefunction into 
+        k-space before and after application</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.constantMomentumNuclearOperator-class.html">lib.NuclearOperator.constantMomentumNuclearOperator</a></strong>:
+      <em class="summary">A Nuclear Operator Constant Over all momentum-space</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.functionalMomentumNuclearOperator-class.html">lib.NuclearOperator.functionalMomentumNuclearOperator</a></strong>:
+      <em class="summary">A Nuclear Operator defined as a function over momentum-space</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.nuclearPropagator-class.html">lib.NuclearOperator.nuclearPropagator</a></strong>:
+      <em class="summary">Class which uses split operator porpagation to third order in dt</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.nuclearPropagatorHIGH_ACCURACY-class.html">lib.NuclearOperator.nuclearPropagatorHIGH_ACCURACY</a></strong>:
+      <em class="summary">Class which uses split operator propagation to fourth order in dt</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.nuclearPropagatorLOW_ACCURACY-class.html">lib.NuclearOperator.nuclearPropagatorLOW_ACCURACY</a></strong>:
+      <em class="summary">Class which uses split operator porpagation to second order in dt</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.positionOperator-class.html">lib.NuclearOperator.positionOperator</a></strong>:
+      <em class="summary">An Operator which just acts on the native position state of the 
+        wavefunction</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.constantPositionNuclearOperator-class.html">lib.NuclearOperator.constantPositionNuclearOperator</a></strong>:
+      <em class="summary">A Nuclear Operator Constant Over all position-space</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.functionalPositionNuclearOperator-class.html">lib.NuclearOperator.functionalPositionNuclearOperator</a></strong>:
+      <em class="summary">A Nuclear Operator defined as a funtion over position-space</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.userSpecifiedSurface_positionOperator-class.html">lib.NuclearOperator.userSpecifiedSurface_positionOperator</a></strong>:
+      <em class="summary">A Nuclear Operator defined as a funtion over position-space</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.zeroNuclearOperator-class.html">lib.NuclearOperator.zeroNuclearOperator</a></strong>:
+      <em class="summary">An operator which knows it is zero so it doesn't waste time doing 
+        operations</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.zeroMomentumOperator-class.html">lib.NuclearOperator.zeroMomentumOperator</a></strong>:
+      <em class="summary">Momentum Nuclear Operator smart enough to know it's zero</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.zeroPositionOperator-class.html">lib.NuclearOperator.zeroPositionOperator</a></strong>:
+      <em class="summary">Position Nuclear Operator smart enough to know it's zero</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearWavefunction.nuclearWavefunction-class.html">lib.NuclearWavefunction.nuclearWavefunction</a></strong>:
+      <em class="summary">Defines a nuclear wavefunction and the operations which can occur 
+        on it</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.NuclearWavefunction.ZeroNuclearWavefunction-class.html">lib.NuclearWavefunction.ZeroNuclearWavefunction</a></strong>:
+      <em class="summary">A Function which knows it's zero and can thus save some time for 
+        computations</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.oneDimentionalHamiltonian-class.html">lib.NuclearOperator.oneDimentionalHamiltonian</a></strong>:
+      <em class="summary">Abstract class to define a soluble single-variable hamiltonian</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.harmonicOscillator-class.html">lib.NuclearOperator.harmonicOscillator</a></strong>:
+      <em class="summary">1D Hamiltonian for a Quantum system where V(x) = kx^2</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.morsePotential-class.html">lib.NuclearOperator.morsePotential</a></strong>:
+      <em class="summary">Used to create a 1D Hamiltonian object with a V(x) of the form of a
+        morse oscillator For implementation details, see the wikipedia 
+        article on the morse potential</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.NuclearOperator.userSpecifiedPotential_Hamiltonian-class.html">lib.NuclearOperator.userSpecifiedPotential_Hamiltonian</a></strong>:
+      <em class="summary">Used to make a 1D Hamiltonian with arbitrary V(x), perhaps from 
+        calculated data.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.experiments.TransientGrating.overlapHelper-class.html">lib.experiments.TransientGrating.overlapHelper</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimePerturbation.spaceSavingElectricDipole-class.html">lib.TimePerturbation.spaceSavingElectricDipole</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeElectronicWavefunction.timeElectronicWavefunction-class.html">lib.TimeElectronicWavefunction.timeElectronicWavefunction</a></strong>:
+      <em class="summary">A collection of electronic wavefunctions to represent the evolution
+        of an electronic/nuclear state</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.timeFunction-class.html">lib.TimeFunction.timeFunction</a></strong>:
+      <em class="summary">Abstract class to keep track of useful items for a function in 
+        time.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.GaussianPulse-class.html">lib.TimeFunction.GaussianPulse</a></strong>:
+      <em class="summary">An abstract object to hold useful methods for dealing with Gaussian
+        pulses</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.GaussianCosinePulse-class.html">lib.TimeFunction.GaussianCosinePulse</a></strong>:
+      <em class="summary">Completely Real Pulse</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.GaussianKMinusPulse-class.html">lib.TimeFunction.GaussianKMinusPulse</a></strong>:
+      <em class="summary">'Backward' Pulse which is complex and negative energy</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.GaussianKPlusPulse-class.html">lib.TimeFunction.GaussianKPlusPulse</a></strong>:
+      <em class="summary">'Forward' Pulse which is complex and has positive energy</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.GaussianRazorBladedPulse-class.html">lib.TimeFunction.GaussianRazorBladedPulse</a></strong>:
+      <em class="summary">Object to handle a pulse which has been razor-bladed in frequency 
+        space</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.deltaFunction-class.html">lib.TimeFunction.deltaFunction</a></strong>:
+      <em class="summary">A Function with ampltiude a/dt at specified time=loaction</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeFunction.zeroTimeFunction-class.html">lib.TimeFunction.zeroTimeFunction</a></strong>:
+      <em class="summary">A Time Function smart enough to know it's zero</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.TimeNuclearWavefunction.timeNuclearWavefunction-class.html">lib.TimeNuclearWavefunction.timeNuclearWavefunction</a></strong>:
+      <em class="summary">Defines a nuclear wavefunction and the operations which can occur 
+        on it.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.Spacetime.unitHandler-class.html">lib.Spacetime.unitHandler</a></strong>:
+      <em class="summary">Abstract Class to handle units for Spacetime object</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="lib.Spacetime.scaledAtomicUnits-class.html">lib.Spacetime.scaledAtomicUnits</a></strong>:
+      <em class="summary">Represents standard atomic units which can have  as unity mass any 
+        multiple of m_e</em>
+    </li>
+    <li> <strong class="uidlink"><a href="lib.Spacetime.wavenumberBasedUnits-class.html">lib.Spacetime.wavenumberBasedUnits</a></strong>:
+      <em class="summary">System of units based on 1 energy unit being x number of 
+        wavenumbers and the mass of the iodine diatom being 1</em>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+</ul>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="lib-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Trees&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Apr  3 15:32:55 2017
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>lib.systems.joel.monomer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="lib-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="lib-module.html">Package&nbsp;lib</a> ::
+        <a href="lib.systems-module.html">Package&nbsp;systems</a> ::
+        <a href="lib.systems.joel-module.html">Package&nbsp;joel</a> ::
+        Module&nbsp;monomer
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="lib.systems.joel.monomer-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module monomer</h1><p class="nomargin-top"><span class="codelink"><a href="lib.systems.joel.monomer-pysrc.html">source&nbsp;code</a></span></p>
+<p>Created on Fri Jan 04 13:23:27 2013</p>
+
+<hr />
+<div class="fields">      <p><strong>Author:</strong>
+        Joey
+      </p>
+</div><!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="energyScale"></a><span class="summary-name">energyScale</span> = <code title="100">100</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="timeScale"></a><span class="summary-name">timeScale</span> = <code title="53.09">53.09</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#mySpace" class="summary-name">mySpace</a> = <code title="Spacetime.Spacetime(xMax= 10.0, numberOfNuclearDimenions= 2, numberOfE\
+lectronicDimensions= 2, numberOfSimulationSpacePointsPerNuclearDimensi\
+on= 200, dt=.02, wavenumberBasedUnits_scaling= 100.0)">Spacetime.Spacetime(xMax= 10.0, numberOfNuclearDimen<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="E_00"></a><span class="summary-name">E_00</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(0.0)">mySpace.unitHandler.energyUnitsFromWavenumbers(0.0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_c"></a><span class="summary-name">omega_c</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(0.0)">mySpace.unitHandler.energyUnitsFromWavenumbers(0.0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#E_10" class="summary-name">E_10</a> = <code title="omega_c-mySpace.unitHandler.energyUnitsFromWavenumbers(125.0)">omega_c-mySpace.unitHandler.energyUnitsFromWavenumbers(<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_00y"></a><span class="summary-name">omega_00y</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(100)">mySpace.unitHandler.energyUnitsFromWavenumbers(100)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_00x"></a><span class="summary-name">omega_00x</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(100)">mySpace.unitHandler.energyUnitsFromWavenumbers(100)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_01x"></a><span class="summary-name">omega_01x</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(200)">mySpace.unitHandler.energyUnitsFromWavenumbers(200)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_10x"></a><span class="summary-name">omega_10x</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(200)">mySpace.unitHandler.energyUnitsFromWavenumbers(200)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_01y"></a><span class="summary-name">omega_01y</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(150)">mySpace.unitHandler.energyUnitsFromWavenumbers(150)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="omega_10y"></a><span class="summary-name">omega_10y</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(150)">mySpace.unitHandler.energyUnitsFromWavenumbers(150)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="delta_00x"></a><span class="summary-name">delta_00x</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="delta_00y"></a><span class="summary-name">delta_00y</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="delta_10x"></a><span class="summary-name">delta_10x</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(100)">mySpace.unitHandler.energyUnitsFromWavenumbers(100)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="delta_10y"></a><span class="summary-name">delta_10y</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="delta_01x"></a><span class="summary-name">delta_01x</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="delta_01y"></a><span class="summary-name">delta_01y</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#pulse_width_stdev" class="summary-name">pulse_width_stdev</a> = <code title="mySpace.unitHandler.timeUnitsFromSeconds(pulse_width_stdev)">mySpace.unitHandler.timeUnitsFromSeconds(p<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#xOscillatorGround" class="summary-name">xOscillatorGround</a> = <code title="NuclearOperator.harmonicOscillator(mySpace, omega= omega_00x, center= \
+delta_00x, energyOffset= E_00)">NuclearOperator.harmonicOscillator(mySpace<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#yOscillatorGround" class="summary-name">yOscillatorGround</a> = <code title="NuclearOperator.harmonicOscillator(mySpace, omega= omega_00y, center= \
+delta_00y, energyOffset= E_00)">NuclearOperator.harmonicOscillator(mySpace<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#xOscillatorExcited" class="summary-name">xOscillatorExcited</a> = <code title="NuclearOperator.harmonicOscillator(mySpace, omega= omega_10x, center= \
+delta_10x, energyOffset= E_00)">NuclearOperator.harmonicOscillator(mySpac<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#yOscillatorExcited" class="summary-name">yOscillatorExcited</a> = <code title="NuclearOperator.harmonicOscillator(mySpace, omega= omega_10y, center= \
+delta_10y, energyOffset= E_10)">NuclearOperator.harmonicOscillator(mySpac<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#groundStateNuclearHamiltonian" class="summary-name">groundStateNuclearHamiltonian</a> = <code title="NuclearOperator.nuclearHamiltonian(mySpace, listOfOneDimensionalHamilt\
+onians= [xOscillatorGround, yOscillatorGround])">NuclearOperator.nuclearHamilto<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#excitedStateNuclearHamiltonian" class="summary-name">excitedStateNuclearHamiltonian</a> = <code title="NuclearOperator.nuclearHamiltonian(mySpace, listOfOneDimensionalHamilt\
+onians= [xOscillatorExcited, yOscillatorExcited])">NuclearOperator.nuclearHamilt<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#groundStateNuclearWavefunction" class="summary-name">groundStateNuclearWavefunction</a> = <code title="NuclearWavefunction.nuclearWavefunction(mySpace, groundStateNuclearHam\
+iltonian= groundStateNuclearHamiltonian)">NuclearWavefunction.nuclearWa<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#electronicHamiltonian" class="summary-name">electronicHamiltonian</a> = <code title="ElectronicOperator.ElectronicHamiltonian(mySpace, [(0, 0, groundStateN\
+uclearHamiltonian), (1, 1, excitedStateNuclearHamiltonian)])">ElectronicOperator.ElectronicHamiltoni<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#initialElectronicWavefunction" class="summary-name">initialElectronicWavefunction</a> = <code title="ElectronicWavefunction.electronicWavefunction(mySpace, listOfNuclearWa\
+vefunctions= [groundStateNuclearWavefunction, 0], Normalize= True)">ElectronicWavefunction.electro<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="xTransitionDipoleValue"></a><span class="summary-name">xTransitionDipoleValue</span> = <code title="1.0">1.0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="yTransitionDipoleValue"></a><span class="summary-name">yTransitionDipoleValue</span> = <code title="3.0">3.0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#xTransitionDipoleNuclearOperator" class="summary-name">xTransitionDipoleNuclearOperator</a> = <code title="NuclearOperator.constantPositionNuclearOperator(mySpace, xTransitionDi\
+poleValue)">NuclearOperator.constantPos<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#yTransitionDipoleNuclearOperator" class="summary-name">yTransitionDipoleNuclearOperator</a> = <code title="NuclearOperator.constantPositionNuclearOperator(mySpace, yTransitionDi\
+poleValue)">NuclearOperator.constantPos<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#xTransitionDipole" class="summary-name">xTransitionDipole</a> = <code title="ElectronicOperator.ElectronicPositionOperator(mySpace, [(0, 1, xTransi\
+tionDipoleNuclearOperator), (1, 0, xTransitionDipoleNuclearOperator)])">ElectronicOperator.ElectronicPositionOpera<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#yTransitionDipole" class="summary-name">yTransitionDipole</a> = <code title="ElectronicOperator.ElectronicPositionOperator(mySpace, [(0, 1, yTransi\
+tionDipoleNuclearOperator), (1, 0, yTransitionDipoleNuclearOperator)])">ElectronicOperator.ElectronicPositionOpera<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#zTransitionDipole" class="summary-name">zTransitionDipole</a> = <code title="ElectronicOperator.ElectronicPositionOperator(mySpace, [])">ElectronicOperator.ElectronicPositionOpera<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#xPump" class="summary-name">xPump</a> = <code title="TimeFunction.GaussianCosinePulse(mySpace, centerOmega= omega_c, timeSp\
+read= pulse_width_stdev)">TimeFunction.GaussianCosinePulse(mySpace, centerOmega=<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#yPump" class="summary-name">yPump</a> = <code title="TimeFunction.GaussianCosinePulse(mySpace, centerOmega= omega_c, timeSp\
+read= pulse_width_stdev)">TimeFunction.GaussianCosinePulse(mySpace, centerOmega=<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="zPump"></a><span class="summary-name">zPump</span> = <code title="TimeFunction.zeroTimeFunction(mySpace)">TimeFunction.zeroTimeFunction(mySpace)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="pumpBeamTuple"></a><span class="summary-name">pumpBeamTuple</span> = <code title="xPump, yPump, zPump">xPump, yPump, zPump</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#transitionDipoleTuple" class="summary-name">transitionDipoleTuple</a> = <code title="xTransitionDipole, yTransitionDipole, zTransitionDipole">xTransitionDipole, yTransitionDipole, <code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#maxFrequency" class="summary-name">maxFrequency</a> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(3000.0)">mySpace.unitHandler.energyUnitsFromWavenumbers(<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#frequencyResolution" class="summary-name">frequencyResolution</a> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(2.0E-1)">mySpace.unitHandler.energyUnitsFromWaven<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="lib.systems.joel.monomer-module.html#pulseSpectrumFrequencies" class="summary-name">pulseSpectrumFrequencies</a> = <code title="mySpace.unitHandler.wavenumbersFromEnergyUnits(pulseSpectrumFrequencie\
+s)">mySpace.unitHandler.wavenumbersFrom<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="noiseSTDEV"></a><span class="summary-name">noiseSTDEV</span> = <code title="mySpace.unitHandler.energyUnitsFromWavenumbers(40.0)">mySpace.unitHandler.energyUnitsFromWavenumbers(40.0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="noiseVariance"></a><span class="summary-name">noiseVariance</span> = <code title="noiseSTDEV** 2">noiseSTDEV** 2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="noiseCorrelation"></a><span class="summary-name">noiseCorrelation</span> = <code title="0.8">0.8</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="noiseCovariance"></a><span class="summary-name">noiseCovariance</span> = <code title="noiseCorrelation* noiseSTDEV** 2">noiseCorrelation* noiseSTDEV** 2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="noiseMean"></a><span class="summary-name">noiseMean</span> = <code title="np.array([[0.0]])">np.array([[0.0]])</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="noiseCovarianceMatrix"></a><span class="summary-name">noiseCovarianceMatrix</span> = <code title="np.array([[noiseVariance]])">np.array([[noiseVariance]])</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="mySpace"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">mySpace</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+Spacetime.Spacetime(xMax= 10.0, numberOfNuclearDimenions= 2, numberOfE<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+lectronicDimensions= 2, numberOfSimulationSpacePointsPerNuclearDimensi<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+on= 200, dt=.02, wavenumberBasedUnits_scaling= 100.0)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="E_10"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">E_10</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+omega_c-mySpace.unitHandler.energyUnitsFromWavenumbers(125.0)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pulse_width_stdev"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pulse_width_stdev</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+mySpace.unitHandler.timeUnitsFromSeconds(pulse_width_stdev)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="xOscillatorGround"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xOscillatorGround</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.harmonicOscillator(mySpace, omega= omega_00x, center= <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+delta_00x, energyOffset= E_00)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="yOscillatorGround"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">yOscillatorGround</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.harmonicOscillator(mySpace, omega= omega_00y, center= <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+delta_00y, energyOffset= E_00)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="xOscillatorExcited"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xOscillatorExcited</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.harmonicOscillator(mySpace, omega= omega_10x, center= <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+delta_10x, energyOffset= E_00)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="yOscillatorExcited"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">yOscillatorExcited</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.harmonicOscillator(mySpace, omega= omega_10y, center= <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+delta_10y, energyOffset= E_10)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="groundStateNuclearHamiltonian"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">groundStateNuclearHamiltonian</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.nuclearHamiltonian(mySpace, listOfOneDimensionalHamilt<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+onians= [xOscillatorGround, yOscillatorGround])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="excitedStateNuclearHamiltonian"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">excitedStateNuclearHamiltonian</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.nuclearHamiltonian(mySpace, listOfOneDimensionalHamilt<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+onians= [xOscillatorExcited, yOscillatorExcited])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="groundStateNuclearWavefunction"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">groundStateNuclearWavefunction</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearWavefunction.nuclearWavefunction(mySpace, groundStateNuclearHam<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+iltonian= groundStateNuclearHamiltonian)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="electronicHamiltonian"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">electronicHamiltonian</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+ElectronicOperator.ElectronicHamiltonian(mySpace, [(0, 0, groundStateN<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+uclearHamiltonian), (1, 1, excitedStateNuclearHamiltonian)])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="initialElectronicWavefunction"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">initialElectronicWavefunction</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+ElectronicWavefunction.electronicWavefunction(mySpace, listOfNuclearWa<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+vefunctions= [groundStateNuclearWavefunction, 0], Normalize= True)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="xTransitionDipoleNuclearOperator"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xTransitionDipoleNuclearOperator</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.constantPositionNuclearOperator(mySpace, xTransitionDi<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+poleValue)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="yTransitionDipoleNuclearOperator"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">yTransitionDipoleNuclearOperator</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+NuclearOperator.constantPositionNuclearOperator(mySpace, yTransitionDi<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+poleValue)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="xTransitionDipole"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xTransitionDipole</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+ElectronicOperator.ElectronicPositionOperator(mySpace, [(0, 1, xTransi<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+tionDipoleNuclearOperator), (1, 0, xTransitionDipoleNuclearOperator)])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="yTransitionDipole"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">yTransitionDipole</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+ElectronicOperator.ElectronicPositionOperator(mySpace, [(0, 1, yTransi<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+tionDipoleNuclearOperator), (1, 0, yTransitionDipoleNuclearOperator)])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="zTransitionDipole"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">zTransitionDipole</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+ElectronicOperator.ElectronicPositionOperator(mySpace, [])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="xPump"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">xPump</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+TimeFunction.GaussianCosinePulse(mySpace, centerOmega= omega_c, timeSp<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+read= pulse_width_stdev)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="yPump"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">yPump</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+TimeFunction.GaussianCosinePulse(mySpace, centerOmega= omega_c, timeSp<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+read= pulse_width_stdev)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="transitionDipoleTuple"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">transitionDipoleTuple</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+xTransitionDipole, yTransitionDipole, zTransitionDipole
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="maxFrequency"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">maxFrequency</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+mySpace.unitHandler.energyUnitsFromWavenumbers(3000.0)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="frequencyResolution"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">frequencyResolution</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+mySpace.unitHandler.energyUnitsFromWavenumbers(2.0E-1)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pulseSpectrumFrequencies"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pulseSpectrumFrequencies</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+mySpace.unitHandler.wavenumbersFromEnergyUnits(pulseSpectrumFrequencie<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+s)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="lib-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Apr  3 15:32:56 2017
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
